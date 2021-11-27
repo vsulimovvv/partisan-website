@@ -1,0 +1,52 @@
+.birthday {
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1200 - 320)));
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 43px 63px;
+    max-width: 1020px;
+    margin: 0 auto;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    max-width: 478px;
+    width: 100%;
+    height: 478px;
+
+    @include breakpointsMaxW($bp-container) {
+      height: calc(300px + (478 - 300) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      justify-self: center;
+    }
+
+    &:nth-child(1) {
+      @include backgroundImage(url('../images/content/birthday/1.jpg'), contain);
+    }
+
+    &:nth-child(2) {
+      @include backgroundImage(url('../images/content/birthday/1.jpg'), contain);
+    }
+
+    &:nth-child(3) {
+      @include backgroundImage(url('../images/content/birthday/1.jpg'), contain);
+    }
+
+    &:nth-child(4) {
+      @include backgroundImage(url('../images/content/birthday/1.jpg'), contain);
+    }
+  }
+}

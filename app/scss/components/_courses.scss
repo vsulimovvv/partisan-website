@@ -1,0 +1,19 @@
+.courses {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  color: var(--color-accent);
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    height: 100%;
+  }
+}

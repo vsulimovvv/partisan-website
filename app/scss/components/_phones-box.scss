@@ -1,0 +1,33 @@
+.phones-box {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &__calls {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__link {
+    &--back-call {
+      text-decoration: underline;
+    }
+
+    &--phone {
+      padding-left: 32px;
+      position: relative;
+
+      &::before {
+        @include pseudoElDefault();
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 21px;
+        height: 21px;
+        @include maskImage(url('../images/sprite.svg#phone'), contain);
+        background-color: var(--color-white);
+      }
+    }
+  }
+}

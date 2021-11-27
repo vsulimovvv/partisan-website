@@ -3,9 +3,14 @@
   --color-black: #000;
   --color-white: #fff;
 
-  --color-dark: #0A0F32;
-  --color-accent: #1C4F8B;
-  --color-blue: #0877D2;
+  --color-dark: #0a0f32;
+  --color-accent: #1c4e8b;
+  --color-blue: #0877d2;
+  --color-red: #f81c19;
+
+  // * ==== Shadow For Everyone
+  --shadow-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
 }
 
 // * breakpointsMaxW
@@ -15,9 +20,10 @@ $bp-768: 768px;
 $bp-650: 650px;
 $bp-576: 576px;
 $bp-420: 420px;
+$bp-375: 375px;
 
 // *=== Fonts
-$Gilroy: 'Gilroy';
+$Roboto: 'Roboto';
 
 // * ==== Z-Index
 $z-1: 1;

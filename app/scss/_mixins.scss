@@ -17,7 +17,7 @@
 }
 
 
-//  margin-bottom: calc(28px + (36 - 28) * ((100vw - 320px) / (1200 - 320)));
+//  bottom: calc(28px + (36 - 28) * ((100vw - 320px) / (1200 - 320)));
 
 @mixin afterIcon($image, $w, $h) {
   background-image: $image;
@@ -57,9 +57,3 @@
   content: '';
 }
 
-
-@mixin afterOnTheLeft {
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}

@@ -1,0 +1,28 @@
+.row-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {}
+
+  &__link {
+    padding: 0 30px;
+    position: relative;
+
+    &::after {
+      @include pseudoElDefault();
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 100%;
+      width: 1px;
+      @include backgroundImage(url('../images/icons/menu-divider.svg'), cover);
+    }
+  }
+
+}

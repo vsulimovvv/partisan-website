@@ -1,9 +1,78 @@
 .header {
   background-color: var(--color-blue);
+  color: var(--color-white);
+  min-height: 108px;
+
+  @include breakpointsMaxW($bp-991) {
+    display: none;
+  }
 
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 14px 0;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+
+    a {
+      &:not(:last-child) {
+        margin-right: 37px;
+      }
+
+      &.city {
+        position: relative;
+        padding-left: 34px;
+
+        &::before {
+          @include pseudoElDefault();
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 21px;
+          height: 21px;
+          @include maskImage(url('../images/sprite.svg#location'), contain);
+          background-color: var(--color-white);
+        }
+      }
+
+      &.route {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__messangers {}
+
+  &__socials {
+    margin-left: 80px;
+  }
+
+  &__bottom {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 19px 0;
+    height: 60px;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__btn {
+    padding: 19px 21px;
   }
 }
