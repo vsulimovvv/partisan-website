@@ -1,0 +1,128 @@
+.card-birthday {
+  padding: 50px 35px;
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 605px);
+  max-width: 1020px;
+  margin: 0 auto;
+
+  @include breakpointsMaxW($bp-container) {
+    padding: calc(7px + (35 - 7) * ((100vw - 320px) / (1200 - 320)));
+  }
+
+  @include breakpointsMaxW($bp-991) {
+    grid-template-columns: 1fr;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 1.4;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1200 - 320)));
+    }
+  }
+
+  &__preview {
+    position: relative;
+
+    @include breakpointsMaxW($bp-991) {
+      width: 100%;
+      height: 530px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    max-width: 295px;
+    width: 100%;
+    height: 186px;
+
+    &:nth-child(1) {
+      top: -31%;
+      left: -18%;
+      transform: rotate(-8.38deg);
+
+      @include breakpointsMaxW($bp-991) {
+        top: 3%;
+        left: 30%;
+      }
+
+      @include breakpointsMaxW($bp-768) {
+        left: 50%;
+        transform: rotate(-8.38deg) translateX(-50%);
+      }
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%) rotate(0.32deg);
+    }
+
+    &:nth-child(3) {
+      max-width: 270px;
+      width: 100%;
+      height: 170px;
+      bottom: -34%;
+      left: -9%;
+      transform: rotate(9.9deg);
+
+      @include breakpointsMaxW($bp-991) {
+        bottom: 5%;
+        left: 30%;
+      }
+
+      @include breakpointsMaxW($bp-768) {
+        left: 50%;
+        transform: rotate(9.9deg) translateX(-50%);
+      }
+    }
+
+    img {
+      @include img(cover);
+    }
+  }
+
+  &__info {
+    max-width: 575px;
+    margin-left: auto;
+
+    @include breakpointsMaxW($bp-991) {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+
+
+  &__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.3;
+
+    span {
+      font-weight: 500;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &:last-child {
+        padding-left: 24px;
+        color: var(--color-accent);
+        position: relative;
+
+        &::before {
+          @include pseudoElDefault();
+          height: 100%;
+          width: 2px;
+          background-color: var(--color-accent);
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+}

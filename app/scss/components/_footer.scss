@@ -1,3 +1,122 @@
 .footer {
- 
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 40px 0;
+  font-size: 14px;
+
+  &__title {
+    text-align: center;
+    color: var(--color-white);
+    margin-bottom: 56px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: minmax(auto, 212px) minmax(auto, 458px) minmax(auto, 206px) minmax(auto, 152px);
+    gap: 48px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 30px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__cols {
+    p:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    .footer__policy {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: underline;
+    }
+  }
+
+  &__lists {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    font-weight: normal;
+    line-height: 3;
+  }
+
+  &__logo {
+    display: block;
+    width: 186px;
+    height: 74px;
+
+    img {
+      @include img(contain);
+    }
+  }
+
+  &__location {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: 30px;
+
+    &::before {
+      @include pseudoElDefault();
+      left: 0;
+      top: 0;
+      width: 21px;
+      height: 21px;
+      @include maskImage(url('../images/sprite.svg#location'), contain);
+      background-color: var(--color-white);
+    }
+
+    a {
+      &.route {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: 23px;
+
+    &::before {
+      @include pseudoElDefault();
+      left: 0;
+      top: 0;
+      width: 21px;
+      height: 21px;
+      @include maskImage(url('../images/sprite.svg#phone'), contain);
+      background-color: var(--color-white);
+    }
+
+    a {
+      &.route {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__messengers {
+    margin-bottom: 23px;
+  }
+
+  .socials {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

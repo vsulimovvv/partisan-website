@@ -1,0 +1,23 @@
+.slider-center {
+width: 100%;
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: '';
+    }
+
+    img {
+      width: 28px;
+      height: 19px;
+    }
+
+  }
+}

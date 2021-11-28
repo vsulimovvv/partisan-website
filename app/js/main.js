@@ -1,4 +1,34 @@
 window.addEventListener('DOMContentLoaded', () => {
+  const swiper = new Swiper(".slider-center", {
+    slidesPerView: 'auto',
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  const swiper2 = new Swiper(".slider-videos", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    breakpoints: {
+      320: {
+        spaceBetween: 20,
+        slidesPerView: 1.2,
+      },
+      576: {
+        slidesPerView: 2.2,
+        spaceBetween: 25,
+      },
+      900: {
+        slidesPerView: 2.2,
+        spaceBetween: 30,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
   // var swiper = new Swiper(".hero__preview", {
   //   slidesPerView: 1,
   //   pagination: {
@@ -317,4 +347,3 @@ window.addEventListener('DOMContentLoaded', () => {
   // };
   // showMenu();
 });
-

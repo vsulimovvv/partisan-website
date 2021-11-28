@@ -1,0 +1,132 @@
+.contacts {
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  @include breakpointsMaxW($bp-container) {
+    padding-top: calc(50px + (130 - 50) * ((100vw - 320px) / (1200 - 320)));
+    padding-bottom: calc(50px + (130 - 50) * ((100vw - 320px) / (1200 - 320)));
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: minmax(auto, 425px) 1fr;
+    gap: 75px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__box {
+    border-bottom: 1px solid #C8C1C1;
+
+    .address {
+      padding-left: 32px;
+      position: relative;
+      margin-bottom: 30px;
+
+      &::before {
+        @include pseudoElDefault();
+        left: 0;
+        top: 0;
+        width: 21px;
+        height: 21px;
+        @include maskImage(url('../images/sprite.svg#location'), contain);
+        background-color: var(--color-accent);
+      }
+
+      p {
+        margin-bottom: 8px;
+      }
+
+      a {
+        color: var(--color-red);
+      }
+    }
+
+    .schedule {
+      padding-left: 32px;
+      position: relative;
+      margin-bottom: 30px;
+
+      &::before {
+        @include pseudoElDefault();
+        left: 0;
+        top: 0;
+        width: 21px;
+        height: 21px;
+        @include maskImage(url('../images/sprite.svg#clock'), contain);
+        background-color: var(--color-accent);
+      }
+
+      p {
+        margin-bottom: 8px;
+      }
+    }
+
+    &--contacts {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .contacts__box-title {
+        display: block;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 1.18;
+        letter-spacing: 0.025em;
+        text-transform: uppercase;
+      }
+
+      .contacts__phone {
+        position: relative;
+        padding-left: 32px;
+
+        &::before {
+          @include pseudoElDefault();
+          left: 0;
+          top: 0;
+          width: 21px;
+          height: 21px;
+          @include maskImage(url('../images/sprite.svg#phone'), contain);
+          background-color: var(--color-accent);
+        }
+      }
+
+      .contacts__box-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 21px;
+      }
+    }
+  }
+
+  &__socials {
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .socials__text {
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 1.18;
+
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__map {
+    background-color: #f00;
+    height: 455px;
+
+    @include breakpointsMaxW($bp-container) {
+      height: calc(250px + (455 - 250) * ((100vw - 320px) / (1200 - 320)));
+    }
+  }
+}

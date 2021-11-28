@@ -1,0 +1,21 @@
+.our-videos {
+  margin-bottom: 58px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 15px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (1200 - 320)));
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1200 - 320)));
+    }
+  }
+}
