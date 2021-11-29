@@ -80,8 +80,8 @@ body {
   color: var(--color-accent);
   text-transform: uppercase;
 
-  font-size: calc(20px + (38 - 20) * ((100vw - 320px) / (1200 - 320)));
-  line-height: calc(26px + (45 - 26) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(30px + (38 - 30) * ((100vw - 320px) / (1200 - 320)));
+  line-height: calc(36px + (45 - 36) * ((100vw - 320px) / (1200 - 320)));
 
   @include breakpointsMinW($bp-container) {
     font-size: 38px;
@@ -141,10 +141,6 @@ body {
   // * ==== Как задумал дизайнер, но мне не нравится
   box-shadow: 0px 19px 20px rgba(79, 14, 14, 0.25), 0px 20px 80px rgba(151, 7, 7, 0.94), 0px 4px 0px #8E0A08, inset 0px -4px 4px rgba(114, 15, 15, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
 
-
-
-  // box-shadow: 0px 4px 0px #8E0A08, inset 0px -4px 4px rgba(114, 15, 15, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
-
   &:hover {
     &::after {
       transform: translateY(-50%) scale(1.4);
@@ -165,8 +161,84 @@ body {
 
   &:active {
     box-shadow: 0px 19px 20px rgba(79, 14, 14, 0.25), 0px 20px 80px rgba(151, 7, 7, 0.94), 0px 1px 1px #8E0A08, inset 0px -4px 4px rgba(114, 15, 15, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
-    // box-shadow: 0px 1px 1px #8E0A08, inset 0px -4px 4px rgba(114, 15, 15, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
     transform: translateY(5px);
+  }
+
+  &--small {
+    box-shadow: none;
+    padding: initial;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    width: 100%;
+    background: #EBEBEB;
+    color: #52535C;
+    text-shadow: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
+.badge {
+  color: var(--color-white);
+  width: 67px;
+  height: 36px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transform: rotate(-5deg) skew(-5deg);
+
+  &--hit {
+    background-color: var(--color-red);
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: '';
+  }
+
+  img {
+    width: 28px;
+    height: 19px;
+  }
+
+  @include breakpointsMaxW($bp-991) {
+    display: none;
+  }
+}
+
+.section-top {
+  text-align: center;
+
+  &__title {
+    @include breakpointsMaxW($bp-768) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(22px + (36 - 28) * ((100vw - 320px) / (1200 - 320)));
+    }
+  }
+}

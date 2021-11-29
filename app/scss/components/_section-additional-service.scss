@@ -1,0 +1,40 @@
+.additional-services {
+  margin-bottom: 104px;
+
+  &__title {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    // gap: ;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-375) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    max-width: 244px;
+    height: 100%;
+
+    @include breakpointsMaxW($bp-991) {
+      justify-self: center;
+    }
+  }
+}

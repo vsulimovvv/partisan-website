@@ -1,0 +1,44 @@
+.script-events {
+  padding-bottom: 150px;
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 83px 17px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    max-width: 383px;
+    position: relative;
+
+    &::after {
+      @include pseudoElDefault();
+      width: 85px;
+      height: 33px;
+      @include maskImage(url('../images/icons/event-decor.svg'), contain);
+      background-color: var(--color-accent);
+      top: 50%;
+      right: 0;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      &::after {
+        display: none;
+      }
+
+      justify-self: center;
+    }
+  }
+}
