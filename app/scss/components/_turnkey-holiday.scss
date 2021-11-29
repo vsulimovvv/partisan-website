@@ -1,0 +1,23 @@
+.turnkey-holiday {
+  .section-top {
+    margin-bottom: 50px;
+  }
+
+  .section-top__title {
+    margin-bottom: 14px;
+  }
+
+  .section-top__text {
+    font-weight: 300;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
