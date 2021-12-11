@@ -47,14 +47,13 @@ body {
 
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(7, 18, 32, 0.74);
   backdrop-filter: blur(5px);
   transition: 200ms ease-in;
 
   &.active {
     opacity: 1;
     visibility: visible;
-    transition-delay: 550ms ease;
   }
 }
 
@@ -181,6 +180,10 @@ body {
     &::after {
       display: none;
     }
+  }
+
+  &--no-shadow {
+    box-shadow: none;
   }
 }
 

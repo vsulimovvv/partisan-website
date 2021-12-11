@@ -2,9 +2,11 @@
   background-color: var(--color-blue);
   color: var(--color-white);
   min-height: 108px;
+  z-index: 99999999999;
+  position: relative;
 
   @include breakpointsMaxW($bp-991) {
-    display: none;
+    // display: none;
   }
 
   &__top {
@@ -12,6 +14,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 14px 0;
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
   }
 
   &__location {
@@ -59,20 +65,122 @@
     justify-content: space-between;
     // padding: 19px 0;
     height: 60px;
-  }
+    z-index: 9 !important;
 
-  &__toggle {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    position: relative;
 
-    svg {
-      width: 36px;
-      height: 36px;
-    }
   }
 
   &__btn {
     padding: 19px 21px;
+  }
+
+  &__main-menu {
+    // z-index: 5 !important;
+    z-index: -1;
+  }
+
+  &__logo-mobile {
+    display: none;
+    width: 178px;
+    height: 71px;
+
+    img {
+      @include img(contain)
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      display: block;
+    }
+  }
+
+  &__phone-mobile {
+    display: none;
+    width: 41px;
+    height: 41px;
+    @include maskImage(url('../images/sprite.svg#phone'), cover);
+    background-color: var(--color-accent);
+
+    @include breakpointsMaxW($bp-991) {
+      display: block;
+    }
+  }
+
+  &__row-menu {
+    @include breakpointsMaxW($bp-991) {
+      display: none !important;
+    }
+  }
+
+  // * ==== Toglge Menu Btn
+  &__toggle {
+    // display: flex;
+    display: block;
+    z-index: 10;
+    flex-shrink: 0;
+    width: 42px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 350ms ease-in;
+
+    &-line {
+      border-radius: 2px;
+      width: 100%;
+      height: 4px;
+      background-color: var(--color-accent);
+      position: relative;
+      transition: 150ms ease-in;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color-accent);
+        transition: 450ms ease-in;
+        border-radius: 2px;
+      }
+
+      &::after {
+        top: -12px;
+      }
+
+      &::before {
+        bottom: -12px;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      // transform: rotate(15deg);
+    }
+
+    &.active {
+      span {
+        background-color: transparent;
+
+        &::after {
+          transform: translateX(-50%) rotate(45deg);
+          top: 0px;
+        }
+
+        &::before {
+          bottom: 0px;
+          transform: translateX(-50%) rotate(-45deg);
+        }
+      }
+    }
+
+  }
+
+  // 
+  .main-menu-mobile {
+    position: absolute;
+    top: 60px;
   }
 }
