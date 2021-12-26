@@ -1,9 +1,12 @@
 .footer {
-  // background-color: var(--color-accent);
   color: var(--color-white);
-  background-color: #0A0F32;
-  padding: 40px 0;
+  padding: 140px 0 40px;
   font-size: 14px;
+
+  background-image: url('../images/content/footer/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 
   &__title {
     text-align: center;

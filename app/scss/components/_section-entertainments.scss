@@ -1,8 +1,12 @@
 .entertainments {
-  background: #ECF1F7;
+  background-color: #ECF1F7;
   padding-bottom: 35px;
   padding-top: 40px;
   margin-bottom: 120px;
+
+  &--no-bg {
+    background-color: transparent;
+  }
 
   &__title {
     margin-bottom: 50px;

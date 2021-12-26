@@ -1,4 +1,10 @@
 .section-form-submit {
+  padding: 140px 0;
+  background-image: url('../images/content/form-submit/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
   &__title {
     max-width: 730px;
     margin: 0 auto;
@@ -22,6 +28,7 @@
     align-items: flex-end;
     @include backgroundImage(url('../images/content/form/bg-1.png'), contain);
     box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.25);
+    background-color: var(--color-white);
 
     @include breakpointsMaxW($bp-768) {
       align-items: center;

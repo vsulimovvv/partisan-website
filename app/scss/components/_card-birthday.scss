@@ -4,6 +4,25 @@
   grid-template-columns: 1fr minmax(auto, 605px);
   max-width: 1020px;
   margin: 0 auto;
+  background: #F6F6F6;
+  transition: 150ms ease;
+  position: relative;
+  box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.19);
+
+  // &:hover {}
+
+  &::after {
+    @include pseudoElDefault();
+    width: 105px;
+    height: 105px;
+    top: 20%;
+    right: -5%;
+    @include backgroundImage(url('../images/decor/card-birthday/triangle.svg'), cover);
+
+    @include breakpointsMaxW($bp-container) {
+      display: none;
+    }
+  }
 
   @include breakpointsMaxW($bp-container) {
     padding: calc(7px + (35 - 7) * ((100vw - 320px) / (1200 - 320)));
@@ -25,10 +44,26 @@
 
   &__preview {
     position: relative;
+    z-index: 1;
 
     @include breakpointsMaxW($bp-991) {
       width: 100%;
       height: 530px;
+    }
+
+    &::after {
+      @include pseudoElDefault();
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 280px;
+      height: 280px;
+      @include backgroundImage(url('../images/decor/birthday/center.svg'), cover);
+      z-index: -1;
+
+      @include breakpointsMaxW($bp-container) {
+        display: none;
+      }
     }
   }
 

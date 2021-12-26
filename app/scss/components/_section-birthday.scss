@@ -11,12 +11,75 @@
     }
   }
 
+  &__wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+    position: relative;
+
+    .decor {
+      position: absolute;
+
+      @include breakpointsMaxW($bp-container) {
+        display: none;
+      }
+
+      &.center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
+        @include backgroundImage(url('../images/decor/birthday/center.svg'), cover);
+      }
+
+      &.circle {
+        top: -40px;
+        right: -80px;
+        width: 322px;
+        height: 322px;
+        @include backgroundImage(url('../images/decor/birthday/circle.svg'), cover);
+      }
+
+      &.star {
+        bottom: 30%;
+        right: -80px;
+        width: 143px;
+        height: 143px;
+        @include backgroundImage(url('../images/decor/birthday/star.svg'), cover);
+      }
+
+      &.triangle {
+        top: 30%;
+        left: -70px;
+        width: 143px;
+        height: 143px;
+        @include backgroundImage(url('../images/decor/birthday/triangle.svg'), cover);
+      }
+
+      &.triangle-2 {
+        z-index: 1;
+        bottom: 30%;
+        left: -80px;
+        width: 143px;
+        height: 143px;
+        @include backgroundImage(url('../images/decor/birthday/triangle-2.svg'), cover);
+      }
+
+      &.corner {
+        top: -30px;
+        left: -30px;
+        width: 200px;
+        height: 200px;
+        @include backgroundImage(url('../images/decor/birthday/corner.svg'), cover);
+      }
+    }
+  }
+
   &__items {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 43px 63px;
-    max-width: 1020px;
-    margin: 0 auto;
 
     @include breakpointsMaxW($bp-991) {
       grid-template-columns: 1fr;

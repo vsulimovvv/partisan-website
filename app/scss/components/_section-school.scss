@@ -1,0 +1,49 @@
+.school {
+  padding: 140px 0;
+  background-image: url('../images/content/reviews/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__list {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 40px;
+  }
+
+  &__item {
+    padding-left: 32px;
+    position: relative;
+    font-weight: 300;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      @include pseudoElDefault();
+      left: 0;
+      top: 0;
+      width: 21px;
+      height: 21px;
+      @include maskImage(url('../images/sprite.svg#defense'), contain);
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__slider {
+    .swiper-slide {
+      height: 437px;
+      width: 100%;
+
+      img {
+        @include img(cover);
+      }
+    }
+  }
+}

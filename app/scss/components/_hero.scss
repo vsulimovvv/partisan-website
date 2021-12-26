@@ -138,32 +138,9 @@
     }
   }
 
-  &--news {
-    min-height: 430px;
-    @include backgroundImage(url('../images/content/hero/hero-7.jpg'), cover);
-
-    @include breakpointsMaxW($bp-576) {
-      min-height: 610px;
-    }
-
-    .hero__title {
-      margin-bottom: 30px;
-
-      @include breakpointsMaxW($bp-576) {
-        max-width: 100%;
-        margin: 0 auto 30px;
-        text-align: center;
-      }
-    }
-  }
-
   &--gift-sertificate {
     min-height: 430px;
     @include backgroundImage(url('../images/content/hero/hero-8.jpg'), cover);
-
-    @include breakpointsMaxW($bp-576) {
-      min-height: 610px;
-    }
 
     .hero__offer {
       max-width: 100%;
@@ -248,5 +225,4 @@
       margin: 0 auto;
     }
   }
-
 }

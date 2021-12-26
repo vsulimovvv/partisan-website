@@ -29,6 +29,28 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
+  const swiper22 = new Swiper(".holidays-held__slider .slider", {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    breakpoints: {
+      320: {
+        spaceBetween: 20,
+        slidesPerView: 1.2,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
   const slider = document.querySelector('.entertainments__slider .slider');
   // const parent = document.querySelectorAll('.entertainments__slider');
@@ -56,41 +78,33 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  // const showMenu = () => {
-  //   const menuBtn = document.querySelector('.header__toggle');
-  //   const menu = document.querySelector('.main-menu');
-  //   const body = document.querySelector('body');
-  //   const overlay = document.querySelector('.overlay');
+  const swiper4 = new Swiper('.reviews__slider', {
+    // slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    breakpoints: {
+      320: {
 
-  //   menuBtn.addEventListener('click', e => {
-  //     menu.classList.toggle('active');
-  //     menuBtn.classList.toggle('active');
-  //     overlay.classList.toggle('active');
-  //     body.classList.toggle('no-scroll');
-  //   });
+        spaceBetween: 20,
+        slidesPerView: 1.2,
+      },
+      576: {
+        slidesPerView: 1.6,
+      },
+      991: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1440: {
+        slidesPerView: 3,
+      },
+      1920: {
+        slidesPerView: 4,
+      },
+    },
 
-  //   overlay.addEventListener('click', e => {
-  //     menu.classList.remove('active');
-  //     overlay.classList.remove('active');
-  //     body.classList.remove('no-scroll');
-  //     menuBtn.classList.remove('active');
-  //   });
+  });
 
-  //   // overlay.addEventListener('click', e => {
-  //   // menu.classList.remove('active');
-  //   // menuBtn.classList.remove('active');
-  //   // overlay.classList.remove('active');
-  //   // body.classList.remove('no-scroll');
-  //   // });
-
-  // };
-
-  // showMenu();
-
-
-
-
-  
   // * ==== Dropdown
   document.addEventListener('click', e => {
     const isDropdownButton = e.target.closest("[data-dropdown-button]")

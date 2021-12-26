@@ -1,0 +1,47 @@
+.reviews {
+  padding: 140px 0;
+  background-image: url('../images/content/reviews/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow-x: hidden;
+
+  &__wrapper {}
+
+  &__offer {
+    text-align: center;
+    max-width: 805px;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__undertitle {
+    display: block;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    font-weight: 300;
+    text-align: left;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__slider {
+    min-width: 0;
+
+    .swiper-wrapper {
+      padding-left: 500px;
+    }
+
+    .swiper-slide {}
+  }
+}

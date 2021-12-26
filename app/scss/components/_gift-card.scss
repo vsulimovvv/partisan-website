@@ -12,7 +12,8 @@
 
     .gift-card {
       &__img {
-        width: 410px;
+        max-width: 410px;
+        width: 100%;
         height: 405px;
       }
     }
@@ -20,6 +21,7 @@
 
   @include breakpointsMaxW($bp-768) {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 
   &__title {
@@ -49,7 +51,6 @@
   &__img {
     width: 305px;
     height: 305px;
-    // background-color: var(--color-accent);
     border-radius: 50%;
 
     @include breakpointsMaxW($bp-768) {
@@ -69,6 +70,12 @@
 
     @include breakpointsMaxW($bp-container) {
       margin-bottom: calc(28px + (43 - 28) * ((100vw - 320px) / (1200 - 320)));
+    }
+  }
+
+  &__btn {
+    @include breakpointsMaxW($bp-768) {
+      margin: 0 auto;
     }
   }
 }

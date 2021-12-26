@@ -3,13 +3,64 @@
   width: 100%;
   height: 275px;
 
+  &:hover {
+    .video-card {
+      &__img {
+        &::after {
+          transform: scaleY(0);
+        }
+      }
+
+      &__play {
+        transform: scale(0);
+      }
+    }
+  }
+
   &__img {
     width: 100%;
     height: 232px;
     margin-bottom: 19px;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      @include pseudoElDefault();
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(10, 15, 50, 0.78);
+      z-index: 1;
+      transform: scaleY(1);
+      transform-origin: top;
+      transition: 350ms ease;
+      transition-delay: 200ms;
+    }
 
     img {
       @include img(cover);
+    }
+  }
+
+  &__play {
+    position: absolute;
+    display: block;
+    width: 71px;
+    height: 45px;
+    border-radius: 8px;
+    z-index: 2;
+    background-color: var(--color-red);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 200ms ease;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: var(--color-white);
+      transition: 200ms ease;
     }
   }
 

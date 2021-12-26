@@ -24,7 +24,7 @@ body {
 }
 
 .container-fluid {
-  max-width: 1920px;
+  width: 100%;
   padding: 0px 15px;
   margin: 0 auto;
 }
@@ -191,6 +191,30 @@ body {
 
     &::after {
       display: none;
+    }
+  }
+
+  &--flat {
+    &::after {
+      display: none;
+    }
+
+    border-radius: 0;
+    box-shadow: none;
+    background: var(--color-red);
+
+    &:focus {
+      box-shadow: 0 0 0 3px var(--color-dark);
+    }
+
+    &:hover {
+      transform: scaleX(1.05);
+    }
+
+    &:active {
+      box-shadow: none;
+      transform: scale(0.98);
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 }
