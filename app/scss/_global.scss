@@ -79,8 +79,8 @@ body {
   color: var(--color-accent);
   text-transform: uppercase;
 
-  font-size: calc(30px + (38 - 30) * ((100vw - 320px) / (1200 - 320)));
-  line-height: calc(36px + (45 - 36) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(26px + (38 - 30) * ((100vw - 320px) / (1200 - 320)));
+  line-height: calc(32px + (45 - 36) * ((100vw - 320px) / (1200 - 320)));
 
   @include breakpointsMinW($bp-container) {
     font-size: 38px;

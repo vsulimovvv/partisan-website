@@ -10,7 +10,174 @@
 
     @include backgroundImage(url('../images/content/hero/1-small.jpg'), cover);
     background-position: center bottom;
+  }
 
+  &--entertainment {
+    min-height: 430px;
+    @include backgroundImage(url('../images/content/hero/hero-2.jpg'), cover);
+
+    @include breakpointsMaxW($bp-576) {
+      min-height: 610px;
+      @include backgroundImage(url('../images/content/hero/hero-2-small.jpg'), cover);
+      background-position: center left;
+    }
+
+    .hero__title {
+      margin-bottom: 30px;
+
+      @include breakpointsMaxW($bp-576) {
+        max-width: 100%;
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  &--celebration {
+    min-height: 430px;
+    @include backgroundImage(url('../images/content/hero/hero-3.jpg'), cover);
+
+    @include breakpointsMaxW($bp-576) {
+      min-height: 610px;
+      @include backgroundImage(url('../images/content/hero/hero-3-small.jpg'), cover);
+      background-position: center left;
+    }
+
+    .hero__title {
+      margin-bottom: 30px;
+
+      @include breakpointsMaxW($bp-576) {
+        max-width: 100%;
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  &--corporate {
+    min-height: 430px;
+    @include backgroundImage(url('../images/content/hero/hero-4.jpg'), cover);
+
+    @include breakpointsMaxW($bp-576) {
+      min-height: 610px;
+      @include backgroundImage(url('../images/content/hero/hero-4-small.jpg'), cover);
+      background-position: center left;
+    }
+
+    .hero__title {
+      margin-bottom: 30px;
+
+      @include breakpointsMaxW($bp-576) {
+        max-width: 100%;
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  &--off-site-activities {
+    min-height: 430px;
+    @include backgroundImage(url('../images/content/hero/hero-5.jpg'), cover);
+
+    @include breakpointsMaxW($bp-576) {
+      min-height: 610px;
+      @include backgroundImage(url('../images/content/hero/hero-5-small.jpg'), cover);
+      background-position: center left;
+    }
+
+    .hero__title {
+      margin-bottom: 30px;
+
+      @include breakpointsMaxW($bp-576) {
+        max-width: 100%;
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  &--school-men {
+    min-height: 430px;
+    @include backgroundImage(url('../images/content/hero/hero-6.jpg'), cover);
+
+    @include breakpointsMaxW($bp-576) {
+      min-height: 610px;
+      @include backgroundImage(url('../images/content/hero/hero-6-small.jpg'), cover);
+      background-position: center left;
+    }
+
+    .hero__title {
+      margin-bottom: 30px;
+
+      @include breakpointsMaxW($bp-576) {
+        max-width: 100%;
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  &--news {
+    min-height: 430px;
+    @include backgroundImage(url('../images/content/hero/hero-7.jpg'), cover);
+
+    @include breakpointsMaxW($bp-576) {
+      min-height: 610px;
+      @include backgroundImage(url('../images/content/hero/hero-7-small.jpg'), cover);
+      background-position: center left;
+    }
+
+    .hero__title {
+      margin-bottom: 30px;
+
+      @include breakpointsMaxW($bp-576) {
+        max-width: 100%;
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  &--news {
+    min-height: 430px;
+    @include backgroundImage(url('../images/content/hero/hero-7.jpg'), cover);
+
+    @include breakpointsMaxW($bp-576) {
+      min-height: 610px;
+    }
+
+    .hero__title {
+      margin-bottom: 30px;
+
+      @include breakpointsMaxW($bp-576) {
+        max-width: 100%;
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  &--gift-sertificate {
+    min-height: 430px;
+    @include backgroundImage(url('../images/content/hero/hero-8.jpg'), cover);
+
+    @include breakpointsMaxW($bp-576) {
+      min-height: 610px;
+    }
+
+    .hero__offer {
+      max-width: 100%;
+    }
+
+    .hero__title {
+      margin-bottom: 30px;
+
+      @include breakpointsMaxW($bp-576) {
+        max-width: 100%;
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+    }
   }
 
   &__offer {
@@ -20,11 +187,11 @@
   &__title {
     margin-bottom: 30px;
 
-    @include breakpointsMaxW($bp-768) {
-      max-width: 100%;
-      margin: 0 auto 30px;
-      text-align: center;
-    }
+    // @include breakpointsMaxW($bp-768) {
+    //   max-width: 100%;
+    //   margin: 0 auto 30px;
+    //   text-align: center;
+    // }
   }
 
   &__list {
@@ -71,7 +238,7 @@
       @include img(cover);
     }
 
-    @include breakpointsMaxW($bp-768) {
+    @include breakpointsMaxW($bp-576) {
       display: none;
     }
   }
@@ -82,11 +249,4 @@
     }
   }
 
-  &--gift-sertificate {
-    .hero {
-      &__offer {
-        max-width: 100%;
-      }
-    }
-  }
 }
