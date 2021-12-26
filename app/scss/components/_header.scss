@@ -5,18 +5,17 @@
   z-index: 99999999999;
   position: relative;
 
-  @include breakpointsMaxW($bp-991) {
-    // display: none;
-  }
-
   &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 14px 0;
 
     @include breakpointsMaxW($bp-991) {
       display: none;
+    }
+
+    &-wrapp {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 
@@ -51,8 +50,6 @@
     }
   }
 
-  &__messangers {}
-
   &__socials {
     margin-left: 80px;
   }
@@ -60,15 +57,88 @@
   &__bottom {
     background-color: var(--color-white);
     color: var(--color-dark);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    // padding: 19px 0;
     height: 60px;
     z-index: 9 !important;
 
+    &--wrapp {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     position: relative;
 
+    color: var(--color-accent);
+
+    .main-menu {
+      width: 352px;
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: var(--color-white);
+      padding: 40px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      transform: translateY(-10px);
+      transition: all 250ms ease-in-out;
+
+      &__item {
+        width: 100%;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #C2C2C2;
+        }
+      }
+
+      &__link {
+        display: block;
+        width: 100%;
+        transition: 150ms ease;
+        padding: 20px 0;
+
+        &:hover {
+          color: var(--color-red);
+        }
+      }
+
+      &__btn {
+        padding: 35px 60px;
+      }
+    }
+
+    &.active {
+      .main-menu {
+        transform: translateY(0);
+        pointer-events: all;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .header__toggle {
+        span {
+          background-color: transparent;
+
+          &::after {
+            transform: translateX(-50%) rotate(45deg);
+            top: 0px;
+          }
+
+          &::before {
+            bottom: 0px;
+            transform: translateX(-50%) rotate(-45deg);
+          }
+        }
+      }
+    }
   }
 
   &__btn {
@@ -76,7 +146,6 @@
   }
 
   &__main-menu {
-    // z-index: 5 !important;
     z-index: -1;
   }
 
@@ -114,7 +183,6 @@
 
   // * ==== Toglge Menu Btn
   &__toggle {
-    // display: flex;
     display: block;
     z-index: 10;
     flex-shrink: 0;
@@ -142,7 +210,7 @@
         left: 50%;
         transform: translateX(-50%);
         background-color: var(--color-accent);
-        transition: 450ms ease-in;
+        transition: 250ms ease-in;
         border-radius: 2px;
       }
 
@@ -155,26 +223,21 @@
       }
     }
 
-    &:hover {
-      transform: scale(1.05);
-      // transform: rotate(15deg);
-    }
+    // &.active {
+    //   span {
+    //     background-color: transparent;
 
-    &.active {
-      span {
-        background-color: transparent;
+    //     &::after {
+    //       transform: translateX(-50%) rotate(45deg);
+    //       top: 0px;
+    //     }
 
-        &::after {
-          transform: translateX(-50%) rotate(45deg);
-          top: 0px;
-        }
-
-        &::before {
-          bottom: 0px;
-          transform: translateX(-50%) rotate(-45deg);
-        }
-      }
-    }
+    //     &::before {
+    //       bottom: 0px;
+    //       transform: translateX(-50%) rotate(-45deg);
+    //     }
+    //   }
+    // }
 
   }
 

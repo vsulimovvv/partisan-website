@@ -7,6 +7,17 @@
   margin: 0 auto;
   min-height: 305px;
 
+  &--big-img {
+    max-width: 1035px;
+
+    .gift-card {
+      &__img {
+        width: 410px;
+        height: 405px;
+      }
+    }
+  }
+
   @include breakpointsMaxW($bp-768) {
     grid-template-columns: 1fr;
   }
@@ -38,7 +49,7 @@
   &__img {
     width: 305px;
     height: 305px;
-    background-color: var(--color-accent);
+    // background-color: var(--color-accent);
     border-radius: 50%;
 
     @include breakpointsMaxW($bp-768) {

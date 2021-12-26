@@ -3,7 +3,7 @@
   min-height: 600px;
   padding-top: 29px;
 
-  @include backgroundImage(url('../images/content/hero/1.jpg'), cover);
+  @include backgroundImage(url('../images/content/hero/hero-main.jpg'), cover);
 
   @include breakpointsMaxW($bp-768) {
     min-height: 745px;
@@ -79,6 +79,14 @@
   &__btn {
     @include breakpointsMaxW($bp-768) {
       margin: 0 auto;
+    }
+  }
+
+  &--gift-sertificate {
+    .hero {
+      &__offer {
+        max-width: 100%;
+      }
     }
   }
 }

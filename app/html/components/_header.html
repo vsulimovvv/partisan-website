@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="main-menu-mobile">
+  <!-- <div class="main-menu-mobile">
     <ul class="main-menu-mobile__list">
       <li class="main-menu-mobile__item">
         <a class="main-menu-mobile__link" href="#">Главная</a>
@@ -38,97 +38,105 @@
         <a class="main-menu-mobile__btn btn btn--no-shadow" href="#">Обратный звонок</a></div>
     </div>
 
-  </div>
-  
-  <div class="container">
-    <nav class="header__wrapper">
-      <div class="header__top">
-        <address class="header__location">
-          <a class="city" href="#">Ульяновск</a>
-          <a class="route" href="#">Как добраться</a>
-        </address>
-        <div class="header__socials socials">
-          <p class="socials__text">Соц сети: </p>
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a class="socials__link socials__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
-            </li>
-          </ul>
-        </div>
+  </div> -->
 
-        <div class="header__messengers phones-box">
-          <div class="messengers">
-            <ul class="messengers__list">
-              <li class="messenger__item">
-                <a class="messengers__link messengers__link--whatsapp" href="#"
-                  aria-label="Напишите или позвоните нам в ватсап"></a>
+  <nav class="header__wrapper">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-wrapp">
+          <address class="header__location">
+            <a class="city" href="#">Ульяновск</a>
+            <a class="route" href="#">Как добраться</a>
+          </address>
+          <div class="header__socials socials">
+            <p class="socials__text">Соц сети: </p>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
               </li>
-              <li class="messengers__item">
-                <a class="messengers__link messengers__link--viber" href="#"
-                  aria-label="Напишите или позвоните нам в вайбер"></a>
-              </li>
-              <li class="messengers__item">
-                <a class="messengers__link messengers__link--telegram" href="#"
-                  aria-label="Напишите или позвоните нам в телеграм"></a>
+              <li class="socials__item">
+                <a class="socials__link socials__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
               </li>
             </ul>
           </div>
+          <div class="header__messengers phones-box">
+            <div class="messengers">
+              <ul class="messengers__list">
+                <li class="messenger__item">
+                  <a class="messengers__link messengers__link--whatsapp" href="#"
+                    aria-label="Напишите или позвоните нам в ватсап"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--viber" href="#"
+                    aria-label="Напишите или позвоните нам в вайбер"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--telegram" href="#"
+                    aria-label="Напишите или позвоните нам в телеграм"></a>
+                </li>
+              </ul>
+            </div>
 
-          <div class="phones-box__calls">
-            <a class="phones-box__link phones-box__link--back-call" href="tel:335462">Обратный звонок</a>
-            <a class="phones-box__link phones-box__link--phone" href="tel:335462">33 - 54 - 62</a>
+            <div class="phones-box__calls">
+              <a class="phones-box__link phones-box__link--back-call" href="tel:335462">Обратный звонок</a>
+              <a class="phones-box__link phones-box__link--phone" href="tel:335462">33 - 54 - 62</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="header__bottom">
-        <button class="header__toggle" type="button" aria-label="Открыть меню">
-          <span class="header__toggle-line"></span>
-        </button>
-        <a class="header__logo-mobile" href="#">
-          <img src="images/logo.svg" alt="Лого">
-        </a>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom--wrapp">
+          <div class="header__menu" data-dropdown>
+            <button class="header__toggle" type="button" data-dropdown-button>
+              <span class="header__toggle-line"></span>
+            </button>
+            <span>Меню</span>
+            <div class="main-menu">
+              <ul class="main-menu__list">
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Главная</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Все услуги</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Корпоративы</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Выездные мероприятия</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Новости и акции</a>
+                </li>
+              </ul>
+              <button class="main-menu__btn btn" type="button">Заказать звонок</button>
+            </div>
+          </div>
 
-        <a class="header__phone-mobile" href="#"></a>
+          <a class="header__logo-mobile" href="#">
+            <img src="images/logo.svg" alt="Лого">
+          </a>
 
-        <div class="header__main-menu main-menu">
-          <ul class="main-menu__list">
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="#">Главная</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="#">Все услуги</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="#">Корпоративы</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="#">Выездные мероприятия</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="#">Новости и акции</a>
-            </li>
-          </ul>
-          <a class="main-menu__btn btn" href="#">Заказать звонок</a>
-        </div>
+          <a class="header__phone-mobile" href="tel:335462"></a>
 
-        <div class="header__row-menu row-menu">
-          <ul class="row-menu__list">
-            <li class="row-menu__item">
-              <a class="row-menu__link" href="#">Детям</a>
-            </li>
-            <li class="row-menu__item">
-              <a class="row-menu__link" href="#">Взрослым</a>
-            </li>
-            <li class="row-menu__item">
-              <a class="row-menu__link" href="#">Школа мужского развития</a>
-            </li>
-          </ul>
-          <a class="header__btn btn" href="#">Подарочный сертификат</a>
+          <div class="header__row-menu row-menu">
+            <ul class="row-menu__list">
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Детям</a>
+              </li>
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Взрослым</a>
+              </li>
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Школа мужского развития</a>
+              </li>
+            </ul>
+            <a class="header__btn btn btn--no-shot" href="#">Подарочный сертификат</a>
+          </div>
         </div>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
