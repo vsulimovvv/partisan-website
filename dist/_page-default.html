@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+ <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- nouislider -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
+
+ <!-- wSelect -->
+ <link rel="stylesheet" href="css/wSelect.css">
+
+ <!-- Custom Link -->
+ <link rel="stylesheet" href="css/style.min.css">
+
+  <title>Партизан</title>
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <div class="overlay"></div>
+    <header class="header">
+  <!-- <div class="main-menu-mobile">
+    <ul class="main-menu-mobile__list">
+      <li class="main-menu-mobile__item">
+        <a class="main-menu-mobile__link" href="#">Главная</a>
+      </li>
+      <li class="main-menu-mobile__item">
+        <a class="main-menu-mobile__link" href="#">Все услуги</a>
+      </li>
+      <li class="main-menu-mobile__item">
+        <a class="main-menu-mobile__link" href="#">Детские праздники</a>
+      </li>
+      <li class="main-menu-mobile__item">
+        <a class="main-menu-mobile__link" href="#">Корпоративы</a>
+      </li>
+      <li class="main-menu-mobile__item">
+        <a class="main-menu-mobile__link" href="#">Выездные мероприятия</a>
+      </li>
+      <li class="main-menu-mobile__item">
+        <a class="main-menu-mobile__link" href="#">Школа мужского развития</a>
+      </li>
+      <li class="main-menu-mobile__item">
+        <a class="main-menu-mobile__link" href="#">Новости и Акции</a>
+      </li>
+      <li class="main-menu-mobile__item">
+        <a class="main-menu-mobile__link" href="#">Подарочный сертификат</a>
+      </li>
+    </ul>
+
+    <div class="main-menu-mobile__bottom">
+      <div class="main-menu-mobile__left">
+        <a class="main-menu-mobile__location" href="#">Ульяновск</a>
+        <a class="main-menu-mobile__phone" href="#">33 - 54 - 62</a>
+      </div>
+      <div class="main-menu-mobile__right">
+        <a class="main-menu-mobile__btn btn btn--small" href="#">Как
+          добраться</a>
+        <a class="main-menu-mobile__btn btn btn--no-shadow" href="#">Обратный звонок</a></div>
+    </div>
+
+  </div> -->
+
+  <nav class="header__wrapper">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-wrapp">
+          <address class="header__location">
+            <a class="city" href="#">Ульяновск</a>
+            <a class="route" href="#">Как добраться</a>
+          </address>
+          <div class="header__socials socials">
+            <p class="socials__text">Соц сети: </p>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__messengers phones-box">
+            <div class="messengers">
+              <ul class="messengers__list">
+                <li class="messenger__item">
+                  <a class="messengers__link messengers__link--whatsapp" href="#"
+                    aria-label="Напишите или позвоните нам в ватсап"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--viber" href="#"
+                    aria-label="Напишите или позвоните нам в вайбер"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--telegram" href="#"
+                    aria-label="Напишите или позвоните нам в телеграм"></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="phones-box__calls">
+              <a class="phones-box__link phones-box__link--back-call" href="tel:335462">Обратный звонок</a>
+              <a class="phones-box__link phones-box__link--phone" href="tel:335462">33 - 54 - 62</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom--wrapp">
+          <div class="header__menu" data-dropdown>
+            <button class="header__toggle" type="button" data-dropdown-button>
+              <span class="header__toggle-line"></span>
+            </button>
+            <span class="header__text">Меню</span>
+            <div class="main-menu">
+              <ul class="main-menu__list">
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Главная</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Все услуги</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Корпоративы</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Выездные мероприятия</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Новости и акции</a>
+                </li>
+              </ul>
+              <button class="main-menu__btn btn" type="button">Заказать звонок</button>
+            </div>
+          </div>
+
+          <a class="header__logo-mobile" href="#">
+            <img src="images/logo.svg" alt="Лого">
+          </a>
+
+          <a class="header__phone-mobile" href="tel:335462"></a>
+
+          <div class="header__row-menu row-menu">
+            <ul class="row-menu__list">
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Детям</a>
+              </li>
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Взрослым</a>
+              </li>
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Школа мужского развития</a>
+              </li>
+            </ul>
+            <a class="header__btn btn btn--flat" href="#">Подарочный сертификат</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    <main class="main">
+      
+    </main>
+    <footer class="footer">
+  <div class="container">
+
+    <h2 class="footer__title section-title">Ого! вы долистали до конца</h2>
+
+    <div class="footer__wrapper">
+      <div class="footer__cols">
+        <a class="footer__logo logo" href="">
+          <img src="images/logo.svg" alt="Логотип">
+        </a>
+        <p>Центр развлечения для детей и взрослых в Ульяновске</p>
+        <a class="footer__policy" href="#">Политика конфиденциальности</a>
+        <p>Copyright 2006-2020 г.</p>
+      </div>
+
+      <div class="footer__lists">
+        <div class="">
+          <h3 class="footer__cols-title">Гостям</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="Главная страница">Главная страница</a>
+            </li>
+            <li class="footer__item">
+              <a href="Главная страница">Все услуги</a>
+            </li>
+            <li class="footer__item">
+              <a href="Главная страница">Новости и акции</a>
+            </li>
+            <li class="footer__item">
+              <a href="Главная страница">Подарочные сертификаты</a>
+            </li>
+            <li class="footer__item">
+              <a href="Главная страница">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <h3 class="footer__cols-title">Гостям</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="Главная страница">Главная страница</a>
+            </li>
+            <li class="footer__item">
+              <a href="Главная страница">Все услуги</a>
+            </li>
+            <li class="footer__item">
+              <a href="Главная страница">Новости и акции</a>
+            </li>
+            <li class="footer__item">
+              <a href="Главная страница">Подарочные сертификаты</a>
+            </li>
+            <li class="footer__item">
+              <a href="Главная страница">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__cols">
+        <h3 class="footer__cols-title">О центре</h3>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="Главная страница">Главная страница</a>
+          </li>
+          <li class="footer__item">
+            <a href="Главная страница">Все услуги</a>
+          </li>
+          <li class="footer__item">
+            <a href="Главная страница">Новости и акции</a>
+          </li>
+          <li class="footer__item">
+            <a href="Главная страница">Подарочные сертификаты</a>
+          </li>
+          <li class="footer__item">
+            <a href="Главная страница">Личный кабинет</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__cols">
+        <h3 class="footer__cols-title">Контакты</h3>
+
+        <address class="footer__location">
+          <a class="city" href="#">Ульяновск</a>
+          <a class="route" href="#">Как добраться</a>
+        </address>
+        <address class="footer__phone">
+          <a class="phone" href="tel:33-54-62">33 - 54 - 62</a>
+          <a class="text" href="#">Обратный звонок</a>
+        </address>
+
+        <div class="footer__messengers messengers">
+          <ul class="messengers__list">
+            <li class="messenger__item">
+              <a class="messengers__link messengers__link--whatsapp" href="#"
+                aria-label="Напишите или позвоните нам в ватсап"></a>
+            </li>
+            <li class="messengers__item">
+              <a class="messengers__link messengers__link--viber" href="#"
+                aria-label="Напишите или позвоните нам в вайбер"></a>
+            </li>
+            <li class="messengers__item">
+              <a class="messengers__link messengers__link--telegram" href="#"
+                aria-label="Напишите или позвоните нам в телеграм"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__socials socials">
+          <span class="socials__text">Соц сети: </span>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+
+    <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- nouislider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- wSelect -->
+  <script src="js/wSelect.min.js"></script>
+
+  <!-- JS -->
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
