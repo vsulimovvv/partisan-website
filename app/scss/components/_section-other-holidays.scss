@@ -1,0 +1,35 @@
+.other-holiday {
+  padding-bottom: 155px;
+  padding-top: 155px;
+  color: var(--color-accent);
+  @include backgroundImage(url('../images/content/other-holidays/bg.png'), cover);
+
+  &__title {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    color: var(--color-dark);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    height: 100%;
+  }
+}

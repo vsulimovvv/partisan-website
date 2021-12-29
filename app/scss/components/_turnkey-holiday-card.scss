@@ -27,13 +27,6 @@
           @include img(cover);
         }
       }
-
-      // .swiper-button-prev,
-      // .swiper-button-next {
-      //   @include breakpointsMaxW($bp-991) {
-      //     display: none;
-      //   }
-      // }
     }
   }
 
@@ -44,6 +37,10 @@
     color: var(--color-accent);
     text-transform: uppercase;
     margin-bottom: 6px;
+
+    &.mb20 {
+      margin-bottom: 20px;
+    }
 
     @include breakpointsMaxW($bp-container) {
       font-size: calc(22px + (38 - 22) * ((100vw - 320px) / (1200 - 320)));
@@ -60,12 +57,19 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
     column-gap: 95px;
     row-gap: 13px;
-    max-width: 285px;
-
+    max-width: 100%;
     margin-bottom: 20px;
+
+    &--3-col {
+      grid-template-columns: repeat(3, 1fr);
+
+      @include breakpointsMaxW($bp-container) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
     @include breakpointsMaxW($bp-container) {
       column-gap: calc(45px + (95 - 45) * ((100vw - 320px) / (1200 - 320)));

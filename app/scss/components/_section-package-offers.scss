@@ -5,6 +5,17 @@
     margin-bottom: 80px;
   }
 
+  &__offer {
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__text {}
+
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

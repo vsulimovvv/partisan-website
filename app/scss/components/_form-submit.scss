@@ -41,7 +41,6 @@
     }
   }
 
-  &__manager {}
 }
 
 .form-submit {
@@ -80,6 +79,18 @@
 
     &--textarea {
       min-height: 105px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px var(--color-dark);
+    }
+
+    &:hover {
+      background-color: rgba(8, 119, 210, 0.2);
+    }
+
+    &:active {
+      box-shadow: 0 0 0 3px var(--color-dark);
     }
   }
 

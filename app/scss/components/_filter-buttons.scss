@@ -1,0 +1,54 @@
+.filter-buttons {
+  display: inline-flex;
+  border: 1px solid #D6D6D6;
+  border-radius: 27px;
+
+
+
+  &__button {
+    padding: 8px 32px;
+    border-radius: 27px;
+    color: var(--color-accent);
+    transition: 150ms ease;
+  }
+
+  &--sort {
+    border: none;
+    gap: 40px;
+
+    .filter-buttons {
+
+      &__button {
+        padding: 0;
+        padding-right: 16px;
+        position: relative;
+
+        &:hover {
+          color: var(--color-dark);
+
+          &::after {
+            background-color: var(--color-dark);
+          }
+        }
+
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+
+        &::after {
+          @include pseudoElDefault();
+          width: 7px;
+          height: 12px;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          @include maskImage(url('../images/sprite.svg#sort'), cover);
+          background-color: #c4c4c4;
+          transition: 150ms ease;
+        }
+      }
+    }
+  }
+}

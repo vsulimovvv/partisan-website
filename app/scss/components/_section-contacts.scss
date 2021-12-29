@@ -8,6 +8,10 @@
   position: relative;
   z-index: 1;
 
+  &--no-bg {
+    background-image: none;
+  }
+
   @include breakpointsMaxW($bp-container) {
     padding-top: calc(50px + (130 - 50) * ((100vw - 320px) / (1200 - 320)));
     padding-bottom: calc(50px + (130 - 50) * ((100vw - 320px) / (1200 - 320)));

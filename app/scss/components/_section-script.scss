@@ -3,6 +3,7 @@
 
   &__title {
     margin-bottom: 80px;
+    text-align: center;
   }
 
   &__items {
@@ -22,6 +23,12 @@
   &__item {
     max-width: 383px;
     position: relative;
+
+    &:nth-child(3n) {
+      &::after {
+        display: none;
+      }
+    }
 
     &::after {
       @include pseudoElDefault();

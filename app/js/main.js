@@ -121,4 +121,92 @@ window.addEventListener('DOMContentLoaded', () => {
       dropdown.classList.remove('active');
     });
   });
+
+
+  // * ==== Toggle Tabs
+  function tabsSlider(
+    headerSelector,
+    tabSelector,
+    contentSelector,
+    activeClass
+  ) {
+    const header = document.querySelectorAll(headerSelector);
+    const tab = document.querySelectorAll(tabSelector);
+    const content = document.querySelectorAll(contentSelector);
+
+    header.forEach(el => {
+      hideTabContent();
+      showTabContent();
+
+      function hideTabContent() {
+        content.forEach((item) => {
+          item.classList.remove('active');
+        });
+        tab.forEach((item) => {
+          item.classList.remove(activeClass);
+        });
+      }
+
+      function showTabContent(i = 0) {
+        content[i].classList.add('active');
+        tab[i].classList.add(activeClass);
+      }
+
+      header.forEach((item) => {
+        if (item) {
+          item.addEventListener('click', (e) => {
+            const target = e.target;
+
+            if (
+              target.classList.contains(tabSelector.replace(/\./, ''))
+            ) {
+              tab.forEach((item, i) => {
+                if (target == item || target.parentNode == item) {
+                  hideTabContent();
+                  showTabContent(i);
+                }
+              });
+            }
+          });
+        }
+      });
+    })
+  };
+  tabsSlider(
+    '.conference-hall__wrapper',
+    '.conference-hall__button',
+    '.conference-hall__content',
+    'conference-hall__button--active'
+  );
+  const mixer = mixitup('.filters', {
+    controls: {
+      toggleDefault: 'none',
+    }
+  });
+
+  mixer.toggleOn('.boy')
+
+  // function filtersHoliday() {
+  //   const items = document.querySelectorAll('.filters__item');
+  //   const btns = document.querySelectorAll('.filters__buttons > button');
+
+  //   btns.forEach(btn => {
+  //     btn.addEventListener('click', e => {
+  //       let target = e.target;
+  //       if (target.tagName !== 'BUTTON') return false;
+
+  //       let filterClass = target.dataset['filter'];
+
+  //       items.forEach(item => {
+  //         item.classList.remove('hide');
+  //         item.style.dispaly = 'block';
+  //         if (!item.classList.contains(filterClass)) {
+  //           item.classList.add('hide');
+  //           item.style.dispaly = 'none';
+  //         }
+  //       });
+  //     });
+  //   });
+  // };
+  // filtersHoliday();
 });
