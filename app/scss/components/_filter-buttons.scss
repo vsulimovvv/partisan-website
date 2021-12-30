@@ -3,21 +3,41 @@
   border: 1px solid #D6D6D6;
   border-radius: 27px;
 
+  gap: 0;
+  flex-wrap: wrap;
+
+  &--for {
+    @include breakpointsMaxW($bp-576) {
+      border: none;
+      gap: 10px;
+    }
+
+    .filter-buttons__button {
+      @include breakpointsMaxW($bp-576) {
+        padding: 19px 32px;
+        border: 1px solid #D6D6D6;
+      }
+    }
+  }
 
 
   &__button {
     padding: 8px 32px;
     border-radius: 27px;
     color: var(--color-accent);
-    transition: 150ms ease;
+    transition: 150ms ease; // Не помогает при исправлении косяка с анимацией
+
   }
 
   &--sort {
     border: none;
     gap: 40px;
 
-    .filter-buttons {
+    @include breakpointsMaxW($bp-576) {
+      gap: 25px;
+    }
 
+    .filter-buttons {
       &__button {
         padding: 0;
         padding-right: 16px;

@@ -20,6 +20,8 @@
   }
 
   &__slider {
+    position: relative;
+
     .swiper-slide {
       height: 437px;
       width: 100%;
