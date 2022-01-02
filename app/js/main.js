@@ -296,6 +296,20 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })();
 
+  (function showMenu() {
+    const menuBtn = document.querySelector('.header__menu--mobile');
+    const menu = document.querySelector('.menu-mobile');
+    const body = document.querySelector('body');
+    // const overlay = document.querySelector('.overlay');
+
+    menuBtn.addEventListener('click', e => {
+      menu.classList.toggle('active');
+      menuBtn.classList.toggle('active');
+      // overlay.classList.toggle('active');
+      body.classList.toggle('no-scroll');
+    });
+  })();
+
   // // * === Show More
   // // function showMore() {
   // //   const toggleAccordion = (accordionControl, accordionContent, accordion) => {

@@ -89,6 +89,10 @@
     height: 60px;
     z-index: 9 !important;
 
+    @include breakpointsMaxW($bp-991) {
+      height: 72px;
+    }
+
     &--wrapp {
       display: flex;
       align-items: center;
@@ -97,6 +101,18 @@
   }
 
   &__menu {
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include breakpointsMaxW($bp-991) {
+        display: flex;
+      }
+    }
+
     display: flex;
     align-items: center;
     gap: 10px;
