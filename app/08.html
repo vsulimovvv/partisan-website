@@ -11,6 +11,9 @@
  <!-- Link Swiper's CSS -->
  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+ <!-- Fancybox -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
  <!-- nouislider -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
 
@@ -70,8 +73,8 @@
       <div class="container">
         <div class="header__top-wrapp">
           <address class="header__location">
-            <a class="city" href="#">Ульяновск</a>
-            <a class="route" href="#">Как добраться</a>
+            <a class="header__link city" href="#">Ульяновск</a>
+            <a class="header__link route" href="#">Как добраться</a>
           </address>
           <div class="header__socials socials">
             <p class="socials__text">Соц сети: </p>
@@ -103,8 +106,8 @@
             </div>
 
             <div class="phones-box__calls">
-              <a class="phones-box__link phones-box__link--back-call" href="tel:335462">Обратный звонок</a>
-              <a class="phones-box__link phones-box__link--phone" href="tel:335462">33 - 54 - 62</a>
+              <a class="header__link phones-box__link phones-box__link--back-call" href="tel:335462">Обратный звонок</a>
+              <a class="header__link phones-box__link phones-box__link--phone" href="tel:335462">33 - 54 - 62</a>
             </div>
           </div>
         </div>
@@ -199,7 +202,7 @@
           <address class="address">
             <p>г. Ульяновск, ул. Октябрьская, 22Г к1
             </p>
-            <a href="#">Как добраться</a>
+            <a class="contacts__link" href="#">Как добраться</a>
           </address>
           <div class="schedule">
             <p>Время работы игрового центра:
@@ -381,6 +384,9 @@
 
   <!-- nouislider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- Fancybox -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
   <!-- MixitUp -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>

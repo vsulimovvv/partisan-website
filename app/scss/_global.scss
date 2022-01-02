@@ -151,10 +151,16 @@ body {
     transition: 159ms ease;
   }
 
+  &:focus {
+    outline: 2px solid var(--color-dark);
+  }
+
   &:hover {
     &::after {
       transform: translateY(-50%) scale(1.4);
     }
+
+    transform: translateY(-3px) scaleX(1.02);
   }
 
   &:active {
@@ -181,15 +187,19 @@ body {
       display: none;
     }
 
+    &:focus {
+      outline: 1px solid var(--color-accent);
+    }
+
     &:hover {
-      background: linear-gradient(255.29deg, #F81C19 7.31%, #C41513 96.79%);
       color: var(--color-white);
-      box-shadow: 0px 19px 20px rgba(79, 14, 14, 0.25), 0px 20px 80px rgba(151, 7, 7, 0.94), 0px 4px 0px #8E0A08, inset 0px -4px 4px rgba(114, 15, 15, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+      box-shadow: none;
+      background: transparent; // Сброс (так как градиент)
+      background-color: var(--color-accent);
     }
 
     &:active {
-      box-shadow: 0px 19px 20px rgba(79, 14, 14, 0.25), 0px 20px 80px rgba(151, 7, 7, 0.94), 0px 1px 1px #8E0A08, inset 0px -4px 4px rgba(114, 15, 15, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
-      transform: translateY(5px);
+      @include btnActive();
     }
   }
 
@@ -246,30 +256,6 @@ body {
   }
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background-color: var(--color-white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &::after {
-    content: '';
-  }
-
-  img {
-    width: 28px;
-    height: 19px;
-  }
-
-  @include breakpointsMaxW($bp-991) {
-    display: none;
-  }
-}
-
 .section-top {
   text-align: center;
 
@@ -291,7 +277,6 @@ body {
 }
 
 .section-bg {
-  // @include backgroundImage(url('../images/content/big-company/bg.png'), cover);
   background-image: url('../images/content/big-company/bg.png');
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -304,4 +289,5 @@ body {
 .mixitup-control-active {
   background-color: var(--color-accent);
   color: var(--color-white) !important;
+  box-shadow: 0px 10px 12px rgba(22, 57, 99, 0.31);
 }

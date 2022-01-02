@@ -112,6 +112,13 @@
         align-items: center;
         gap: 21px;
       }
+
+      .messengers {
+        &__link {
+          width: 25px;
+          height: 25px;
+        }
+      }
     }
   }
 
@@ -129,6 +136,13 @@
       text-transform: uppercase;
       margin-bottom: 15px;
     }
+
+    .socials {
+      &__link {
+        width: 43px;
+        height: 43px;
+      }
+    }
   }
 
   &__map {
@@ -142,6 +156,23 @@
 
     @include breakpointsMaxW($bp-container) {
       height: calc(250px + (455 - 250) * ((100vw - 320px) / (1200 - 320)));
+    }
+  }
+
+  &__link {
+    transition: 150ms ease;
+    display: inline-block;
+
+    &:focus {
+      outline: 1px solid var(--color-red);
+    }
+
+    &:hover {
+      transform: translateX(3px);
+    }
+
+    &:active {
+      background-color: #eee;
     }
   }
 }

@@ -11,6 +11,9 @@
  <!-- Link Swiper's CSS -->
  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+ <!-- Fancybox -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
  <!-- nouislider -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
 
@@ -70,8 +73,8 @@
       <div class="container">
         <div class="header__top-wrapp">
           <address class="header__location">
-            <a class="city" href="#">Ульяновск</a>
-            <a class="route" href="#">Как добраться</a>
+            <a class="header__link city" href="#">Ульяновск</a>
+            <a class="header__link route" href="#">Как добраться</a>
           </address>
           <div class="header__socials socials">
             <p class="socials__text">Соц сети: </p>
@@ -103,8 +106,8 @@
             </div>
 
             <div class="phones-box__calls">
-              <a class="phones-box__link phones-box__link--back-call" href="tel:335462">Обратный звонок</a>
-              <a class="phones-box__link phones-box__link--phone" href="tel:335462">33 - 54 - 62</a>
+              <a class="header__link phones-box__link phones-box__link--back-call" href="tel:335462">Обратный звонок</a>
+              <a class="header__link phones-box__link phones-box__link--phone" href="tel:335462">33 - 54 - 62</a>
             </div>
           </div>
         </div>
@@ -208,9 +211,9 @@
           </div>
           <div class="filters-card__right">
             <div class="filters-card__pickers">
-              <span class="filters-card__picker">Хит</span>
-              <span class="filters-card__picker">Для мальчиков</span>
-              <span class="filters-card__picker">Для девочек</span>
+              <a class="filters-card__picker" href="#">Хит</a>
+              <a class="filters-card__picker" href="#">Для мальчиков</a>
+              <a class="filters-card__picker" href="#">Для девочек</a>
             </div>
             <div class="filters-card__content">
               <div class="filters-card__details">
@@ -240,9 +243,9 @@
           </div>
           <div class="filters-card__right">
             <div class="filters-card__pickers">
-              <span class="filters-card__picker">Хит</span>
-              <span class="filters-card__picker">Для мальчиков</span>
-              <span class="filters-card__picker">Для девочек</span>
+              <a class="filters-card__picker" href="#">Хит</a>
+              <a class="filters-card__picker" href="#">Для мальчиков</a>
+              <a class="filters-card__picker" href="#">Для девочек</a>
             </div>
             <div class="filters-card__content">
               <div class="filters-card__details">
@@ -272,9 +275,9 @@
           </div>
           <div class="filters-card__right">
             <div class="filters-card__pickers">
-              <span class="filters-card__picker">Хит</span>
-              <span class="filters-card__picker">Для мальчиков</span>
-              <span class="filters-card__picker">Для девочек</span>
+              <a class="filters-card__picker" href="#">Хит</a>
+              <a class="filters-card__picker" href="#">Для мальчиков</a>
+              <a class="filters-card__picker" href="#">Для девочек</a>
             </div>
             <div class="filters-card__content">
               <div class="filters-card__details">
@@ -304,9 +307,9 @@
           </div>
           <div class="filters-card__right">
             <div class="filters-card__pickers">
-              <span class="filters-card__picker">Хит</span>
-              <span class="filters-card__picker">Для мальчиков</span>
-              <span class="filters-card__picker">Для девочек</span>
+              <a class="filters-card__picker" href="#">Хит</a>
+              <a class="filters-card__picker" href="#">Для мальчиков</a>
+              <a class="filters-card__picker" href="#">Для девочек</a>
             </div>
             <div class="filters-card__content">
               <div class="filters-card__details">
@@ -336,9 +339,9 @@
           </div>
           <div class="filters-card__right">
             <div class="filters-card__pickers">
-              <span class="filters-card__picker">Хит</span>
-              <span class="filters-card__picker">Для мальчиков</span>
-              <span class="filters-card__picker">Для девочек</span>
+              <a class="filters-card__picker" href="#">Хит</a>
+              <a class="filters-card__picker" href="#">Для мальчиков</a>
+              <a class="filters-card__picker" href="#">Для девочек</a>
             </div>
             <div class="filters-card__content">
               <div class="filters-card__details">
@@ -368,9 +371,9 @@
           </div>
           <div class="filters-card__right">
             <div class="filters-card__pickers">
-              <span class="filters-card__picker">Хит</span>
-              <span class="filters-card__picker">Для мальчиков</span>
-              <span class="filters-card__picker">Для девочек</span>
+              <a class="filters-card__picker" href="#">Хит</a>
+              <a class="filters-card__picker" href="#">Для мальчиков</a>
+              <a class="filters-card__picker" href="#">Для девочек</a>
             </div>
             <div class="filters-card__content">
               <div class="filters-card__details">
@@ -394,7 +397,7 @@
         </article>
       </li>
     </ul>
-    <button class="filters__btn btn btn--small" type="button">Смотреть еще<a />
+    <button class="filters__btn btn btn--small" type="button">Смотреть еще</button>
   </div>
 </section>
       <section class="section-form-submit">
@@ -561,6 +564,9 @@
 
   <!-- nouislider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- Fancybox -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
   <!-- MixitUp -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>

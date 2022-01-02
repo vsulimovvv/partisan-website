@@ -103,28 +103,34 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  // const swiper2 = new Swiper(".slider-videos", {
-  //   slidesPerView: 3,
-  //   spaceBetween: 30,
-  //   breakpoints: {
-  //     320: {
-  //       spaceBetween: 20,
-  //       slidesPerView: 1.2,
-  //     },
-  //     576: {
-  //       slidesPerView: 2.2,
-  //       spaceBetween: 25,
-  //     },
-  //     900: {
-  //       slidesPerView: 2.2,
-  //       spaceBetween: 30,
-  //     },
-  //     991: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 30,
-  //     },
-  //   },
-  // });
+  (function videosSlider() {
+    const swiper = new Swiper(".slider-videos", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      slidesPerView: 3,
+      spaceBetween: 30,
+      breakpoints: {
+        320: {
+          spaceBetween: 20,
+          slidesPerView: 1.2,
+        },
+        576: {
+          slidesPerView: 2.2,
+          spaceBetween: 25,
+        },
+        900: {
+          slidesPerView: 2.2,
+          spaceBetween: 30,
+        },
+        991: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  })();
 
   // const swiper22 = new Swiper(".holidays-held__slider .slider", {
   //   slidesPerView: 'auto',
@@ -149,11 +155,6 @@ window.addEventListener('DOMContentLoaded', () => {
   //   },
   // });
 
-
-
-
-
-
   // * ==== Dropdown
   document.addEventListener('click', e => {
     const isDropdownButton = e.target.closest("[data-dropdown-button]")
@@ -170,7 +171,6 @@ window.addEventListener('DOMContentLoaded', () => {
       dropdown.classList.remove('active');
     });
   });
-
 
   // * ==== Toggle Tabs
   function tabsSlider(
@@ -332,13 +332,15 @@ window.addEventListener('DOMContentLoaded', () => {
   // // };
   // // showMore();
 
-  // // (function filtersHolidays() {
-  // //   const container = document.querySelector('.filters');
-  // //   const mixer = mixitup(container, {
-  // //     controls: {
-  // //       toggleDefault: 'none',
-  // //     }
-  // //   });
-  // //   mixer.toggleOn('.boy')
-  // // })();
+  (function filtersHolidays() {
+    const container = document.querySelector('.filters');
+    if (container) {
+      const mixer = mixitup(container, {
+        controls: {
+          toggleDefault: 'none',
+        }
+      });
+      mixer.toggleOn('.boy')
+    }
+  })();
 });

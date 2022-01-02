@@ -37,6 +37,12 @@
         position: relative;
         padding-left: 34px;
 
+        &:active {
+          &::before {
+            background-color: var(--color-accent);
+          }
+        }
+
         &::before {
           @include pseudoElDefault();
           left: 0;
@@ -57,6 +63,24 @@
 
   &__socials {
     margin-left: 80px;
+
+    .socials {
+      &__link {
+        &:focus {
+          outline: 1px solid var(--color-white);
+        }
+      }
+    }
+  }
+
+  &__messengers {
+    .messengers {
+      &__link {
+        &:focus {
+          outline: 1px solid var(--color-white);
+        }
+      }
+    }
   }
 
   &__bottom {
@@ -116,8 +140,18 @@
         transition: 150ms ease;
         padding: 20px 0;
 
+        &:focus {
+          outline: 1px solid var(--color-red);
+          color: var(--color-red);
+        }
+
         &:hover {
           color: var(--color-red);
+        }
+
+        &:active {
+          color: var(--color-dark);
+          outline: 1px solid var(--color-dark);
         }
       }
 
@@ -262,6 +296,27 @@
 
       &::before {
         bottom: -12px;
+      }
+    }
+  }
+
+  &__link {
+    transition: 0.7;
+
+    &:focus {
+      outline: 1px solid var(--color-white);
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      background-color: var(--color-white);
+      color: var(--color-accent);
+
+      &::before {
+        background-color: var(--color-accent);
       }
     }
   }

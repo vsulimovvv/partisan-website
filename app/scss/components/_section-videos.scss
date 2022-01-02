@@ -18,4 +18,12 @@
       margin-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1200 - 320)));
     }
   }
+
+  .slider-videos {
+    padding-bottom: 70px;
+
+    @include breakpointsMaxW($bp-991) {
+      padding-bottom: 80px;
+    }
+  }
 }

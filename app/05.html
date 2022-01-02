@@ -11,6 +11,9 @@
  <!-- Link Swiper's CSS -->
  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+ <!-- Fancybox -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
  <!-- nouislider -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
 
@@ -70,8 +73,8 @@
       <div class="container">
         <div class="header__top-wrapp">
           <address class="header__location">
-            <a class="city" href="#">Ульяновск</a>
-            <a class="route" href="#">Как добраться</a>
+            <a class="header__link city" href="#">Ульяновск</a>
+            <a class="header__link route" href="#">Как добраться</a>
           </address>
           <div class="header__socials socials">
             <p class="socials__text">Соц сети: </p>
@@ -103,8 +106,8 @@
             </div>
 
             <div class="phones-box__calls">
-              <a class="phones-box__link phones-box__link--back-call" href="tel:335462">Обратный звонок</a>
-              <a class="phones-box__link phones-box__link--phone" href="tel:335462">33 - 54 - 62</a>
+              <a class="header__link phones-box__link phones-box__link--back-call" href="tel:335462">Обратный звонок</a>
+              <a class="header__link phones-box__link phones-box__link--phone" href="tel:335462">33 - 54 - 62</a>
             </div>
           </div>
         </div>
@@ -625,7 +628,7 @@
           <address class="address">
             <p>г. Ульяновск, ул. Октябрьская, 22Г к1
             </p>
-            <a href="#">Как добраться</a>
+            <a class="contacts__link" href="#">Как добраться</a>
           </address>
           <div class="schedule">
             <p>Время работы игрового центра:
@@ -742,9 +745,24 @@
       <div class="our-videos__wrapper">
         <div class="slider-videos swiper">
           <ul class="swiper-wrapper">
-            <div class="swiper-slide">
+            <li class="swiper-slide">
               <div class="video-card">
-                <div class="video-card__img">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
+                  <button class=" video-card__play" type="button" aria-label="Посмотреть видео">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-btn"></use>
+                    </svg>
+                  </button>
+                  <img src="images/content/our-videos/2.jpg" alt="Видео про День в армии">
+                </div>
+                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="video-card">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
                   <button class="video-card__play" type="button" aria-label="Посмотреть видео">
                     <svg>
                       <use xlink:href="images/sprite.svg#play-btn"></use>
@@ -754,10 +772,53 @@
                 </div>
                 <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
               </div>
-            </div>
-            <div class="swiper-slide">
+            </li>
+            <li class="swiper-slide">
               <div class="video-card">
-                <div class="video-card__img">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
+                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-btn"></use>
+                    </svg>
+                  </button>
+                  <img src="images/content/our-videos/3.jpg" alt="Видео про День в армии">
+                </div>
+                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="video-card">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
+                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-btn"></use>
+                    </svg>
+                  </button>
+                  <img src="images/content/our-videos/2.jpg" alt="Видео про День в армии">
+                </div>
+                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="video-card">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
+                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-btn"></use>
+                    </svg>
+                  </button>
+                  <img src="images/content/our-videos/3.jpg" alt="Видео про День в армии">
+                </div>
+                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="video-card">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
                   <button class="video-card__play" type="button" aria-label="Посмотреть видео">
                     <svg>
                       <use xlink:href="images/sprite.svg#play-btn"></use>
@@ -767,60 +828,9 @@
                 </div>
                 <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="video-card">
-                <div class="video-card__img">
-                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#play-btn"></use>
-                    </svg>
-                  </button>
-                  <img src="images/content/our-videos/1.jpg" alt="Видео про День в армии">
-                </div>
-                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="video-card">
-                <div class="video-card__img">
-                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#play-btn"></use>
-                    </svg>
-                  </button>
-                  <img src="images/content/our-videos/1.jpg" alt="Видео про День в армии">
-                </div>
-                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="video-card">
-                <div class="video-card__img">
-                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#play-btn"></use>
-                    </svg>
-                  </button>
-                  <img src="images/content/our-videos/1.jpg" alt="Видео про День в армии">
-                </div>
-                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="video-card">
-                <div class="video-card__img">
-                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#play-btn"></use>
-                    </svg>
-                  </button>
-                  <img src="images/content/our-videos/1.jpg" alt="Видео про День в армии">
-                </div>
-                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
-              </div>
-            </div>
+            </li>
           </ul>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
@@ -955,6 +965,9 @@
 
   <!-- nouislider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- Fancybox -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
   <!-- MixitUp -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>

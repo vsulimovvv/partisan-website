@@ -17,21 +17,31 @@
         padding: 19px 32px;
         border: 1px solid #D6D6D6;
       }
+
+      &:focus {
+        outline: 1px solid var(--color-accent);
+      }
+
+      &:hover {
+        box-shadow: 0px 10px 12px rgba(22, 57, 99, 0.31);
+      }
+
+      &:active {
+        @include btnActive();
+      }
     }
   }
-
 
   &__button {
     padding: 8px 32px;
     border-radius: 27px;
     color: var(--color-accent);
     transition: 150ms ease; // Не помогает при исправлении косяка с анимацией
-
   }
 
   &--sort {
     border: none;
-    gap: 40px;
+    gap: 34px;
 
     @include breakpointsMaxW($bp-576) {
       gap: 25px;
@@ -39,9 +49,13 @@
 
     .filter-buttons {
       &__button {
-        padding: 0;
-        padding-right: 16px;
+        padding: 2px;
+        padding-right: 18px;
         position: relative;
+
+        &:focus {
+          outline: solid 1px var(--color-accent);
+        }
 
         &:hover {
           color: var(--color-dark);
@@ -51,7 +65,14 @@
           }
         }
 
+        &:active {
+          background-color: var(--color-accent);
+          color: var(--color-white);
+        }
+
         &:last-child {
+          padding-right: 0;
+
           &::after {
             display: none;
           }
@@ -61,7 +82,7 @@
           @include pseudoElDefault();
           width: 7px;
           height: 12px;
-          right: 0;
+          right: 4px;
           top: 50%;
           transform: translateY(-50%);
           @include maskImage(url('../images/sprite.svg#sort'), cover);
