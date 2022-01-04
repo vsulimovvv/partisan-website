@@ -18,24 +18,9 @@
     margin: 0 auto;
     background-color: var(--color-accent);
     color: var(--color-white);
-
   }
-}
 
-.slider {
-  max-width: 1010px;
-  width: 100%;
-  margin-bottom: 40px;
-
-
-  .swiper-wrapper {}
-}
-
-.entertainments__slider {
-  position: relative;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  position: absolute;
+  &__slider {
+    position: relative;
+  }
 }

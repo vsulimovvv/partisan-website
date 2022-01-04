@@ -7,8 +7,9 @@
   margin: 0 auto;
   line-height: 1.3;
 
-  @include breakpointsMaxW($bp-768) {
+  @include breakpointsMaxW($bp-768 - 1px) {
     flex-direction: column;
+    text-align: center;
   }
 
   &__img {

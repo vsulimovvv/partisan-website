@@ -1,6 +1,6 @@
 .contacts {
   padding-top: 130px;
-  padding-bottom: 130px;
+  padding-bottom: 150px;
   background-image: url('../images/icons/decor-8.svg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,13 +8,23 @@
   position: relative;
   z-index: 1;
 
-  &--no-bg {
-    background-image: none;
+  @include breakpointsMaxW($bp-container) {
+    padding-top: calc(70px + (130 - 50) * ((100vw - 320px) / (1200 - 320)));
   }
 
-  @include breakpointsMaxW($bp-container) {
-    padding-top: calc(50px + (130 - 50) * ((100vw - 320px) / (1200 - 320)));
-    padding-bottom: calc(50px + (130 - 50) * ((100vw - 320px) / (1200 - 320)));
+  @include breakpointsMaxW($bp-991) {
+    padding-bottom: 250px;
+  }
+
+  &--no-bg {
+    background-image: none;
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    @include breakpointsMaxW($bp-container) {
+      padding-top: calc(50px + (130 - 50) * ((100vw - 320px) / (1200 - 320)));
+      padding-bottom: calc(50px + (130 - 50) * ((100vw - 320px) / (1200 - 320)));
+    }
   }
 
   &__title {

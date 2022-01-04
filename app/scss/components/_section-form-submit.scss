@@ -26,116 +26,115 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    @include backgroundImage(url('../images/content/form/bg-1.png'), contain);
+    @include backgroundImage(url('../images/content/form-submit/bg-wrap.png'), cover);
     box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.25);
     background-color: var(--color-white);
+    position: relative;
+    z-index: 5;
+
+    &::after {
+      @include pseudoElDefault();
+      width: 392px;
+      height: 547px;
+      @include backgroundImage(url('../images/content/form-submit/manager.png'), contain);
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      @include breakpointsMaxW($bp-768) {
+        top: initial;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 317px;
+        height: 373px;
+        background-size: cover;
+        background-position: center top;
+      }
+    }
 
     @include breakpointsMaxW($bp-768) {
+      max-width: calc(100% - 40px);
       align-items: center;
       padding-left: 27px;
       padding-right: 30px;
       padding-bottom: 373px;
 
-      background-size: 750px;
-      background-position: 100px 140%;
+      background-size: 150%;
+      background-position: left bottom;
+    }
+
+    @include breakpointsMaxW($bp-420) {
+      max-width: 100%;
     }
   }
 
-}
+  .decor {
+    position: absolute;
 
-.form-submit {
-  max-width: 380px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  line-height: 1.3;
+    @include breakpointsMaxW($bp-container) {
+      display: none;
+    }
 
-  &__title {
-    font-weight: bold;
-    font-size: 22px;
-    color: var(--color-accent);
-    margin-bottom: 5px;
+    &.cube {
+      width: 318px;
+      height: 349px;
+      @include backgroundImage(url('../images/content/form-submit/cube.png'), cover);
+      left: -220px;
+      bottom: -30px;
+      z-index: -5;
+    }
 
-    span {
-      font-weight: 300;
-      font-size: 16px;
+    &.gun {
+      width: 240px;
+      height: 150px;
+      right: -150px;
+      bottom: 0;
+      @include backgroundImage(url('../images/content/form-submit/gun.png'), cover);
+      z-index: 1;
     }
   }
 
-  &__group {
-    max-width: 370px;
-    width: 100%;
-  }
+  &__form-submit {
+    max-width: 380px;
 
-  &__input {
-    width: 100%;
-    border: 1px solid var(--color-border);
-    padding: 15px 25px;
-
-    &::placeholder {
-      font-weight: 300;
-      font-size: 16px;
-    }
-
-    &--textarea {
-      min-height: 105px;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 1px var(--color-dark);
-    }
-
-    &:hover {
-      background-color: rgba(8, 119, 210, 0.2);
-    }
-
-    &:active {
-      box-shadow: 0 0 0 3px var(--color-dark);
+    @include breakpointsMaxW($bp-768) {
+      max-width: 100%;
     }
   }
 
-  &__btn {
-    margin-bottom: 15px;
-  }
+  .manager-badge {
+    position: absolute;
+    bottom: 88px;
+    left: 40px;
+    width: 275px;
+    height: 101px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  &__text {
-    font-weight: 300;
-    font-size: 14px;
-    text-align: center;
-  }
-}
+    @include breakpointsMaxW($bp-768) {
+      bottom: 27px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-.manager-badge {
-  position: absolute;
-  bottom: 88px;
-  left: 40px;
-  width: 275px;
-  height: 101px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    @include backgroundImage(url('../images/content/form/rectangle-manager.png'), contain);
 
-  @include breakpointsMaxW($bp-768) {
-    bottom: 27px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    &__title {
+      color: var(--color-white);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.3;
+      margin-bottom: 3px;
+    }
 
-  @include backgroundImage(url('../images/content/form/rectangle-manager.png'), contain);
-
-  &__title {
-    color: var(--color-white);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.3;
-    margin-bottom: 3px;
-  }
-
-  &__text {
-    max-width: 220px;
-    font-size: 14px;
-    line-height: 1.3;
-    color: #C9D5E3;
+    &__text {
+      max-width: 220px;
+      font-size: 14px;
+      line-height: 1.3;
+      color: #C9D5E3;
+    }
   }
 }

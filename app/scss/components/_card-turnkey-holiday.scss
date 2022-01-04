@@ -74,6 +74,10 @@
     @include breakpointsMaxW($bp-container) {
       column-gap: calc(45px + (95 - 45) * ((100vw - 320px) / (1200 - 320)));
     }
+
+    @include breakpointsMaxW($bp-420) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {

@@ -9,20 +9,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   height: 100%;
-
   position: relative;
-
-  &::after {
-    @include pseudoElDefault();
-    width: 54px;
-    height: 48px;
-    background-color: #ECF1F6;
-    top: -22px;
-    right: -25px;
-    transform: rotate(45deg);
-  }
+  clip-path: polygon(88% 0, 100% 12%, 100% 100%, 0 100%, 0 0);
 
   @include breakpointsMaxW($bp-container) {
     padding-left: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));

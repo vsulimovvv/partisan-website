@@ -56,7 +56,8 @@
     &:hover {
       background-color: var(--color-blue);
     }
-    &:active{
+
+    &:active {
       opacity: 1;
     }
   }
@@ -65,5 +66,47 @@
     background-color: var(--color-blue);
     width: 30px;
     border-radius: 10px;
+  }
+}
+
+.slider {
+  max-width: 1010px;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 20px;
+  position: relative;
+
+  @include breakpointsMaxW($bp-991) {
+    padding: 0;
+  }
+
+  &::after,
+  &::before {
+    @include pseudoElDefault();
+    width: 220px;
+    height: 195px;
+    @include backgroundImage(url('../images/content/entertainments/decor.svg'), contain);
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
+  }
+
+  &::after {
+    top: -20px;
+    left: -20px;
+  }
+
+  &::before {
+    bottom: -20px;
+    right: -20px;
+  }
+
+  &--no-decor {
+
+    &::after,
+    &::before {
+      display: none;
+    }
   }
 }

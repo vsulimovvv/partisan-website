@@ -1,0 +1,25 @@
+.news {
+  background-color: var(--color-white);
+  padding-bottom: 35px;
+  padding-top: 40px;
+
+  &--no-bg {
+    background-color: transparent;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__btn {
+    max-width: 288px;
+    margin: 0 auto;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+  }
+
+  &__slider {
+    position: relative;
+  }
+}

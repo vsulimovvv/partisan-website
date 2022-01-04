@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-
-  (function entertainmentsSlider(parent) {
+  function sliderThreeSlidesPerView(parent) {
     const parentEl = document.querySelector(parent);
     if (parentEl) {
       const slider = parentEl.querySelector('.slider');
@@ -25,48 +24,14 @@ window.addEventListener('DOMContentLoaded', () => {
           nextEl: parentEl.querySelector(".swiper-button-next"),
           prevEl: parentEl.querySelector(".swiper-button-prev"),
         },
-        // pagination: {
-        //   el: parentEl.querySelector(".swiper-pagination"),
-        // },
-
       });
     }
-  })('.entertainments__slider');
+  };
+  sliderThreeSlidesPerView('.entertainments__slider');
+  sliderThreeSlidesPerView('.news__slider');
+  sliderThreeSlidesPerView('.holidays-held__slider');
 
-  (function holidaysHeld(parent) {
-    const parentEl = document.querySelector(parent);
-    if (parentEl) {
-      const slider = parentEl.querySelector('.slider');
-      const swiper = new Swiper(slider, {
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-        breakpoints: {
-          320: {
-            spaceBetween: 20,
-            slidesPerView: 1.2,
-          },
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          991: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        },
-        navigation: {
-          nextEl: parentEl.querySelector(".swiper-button-next"),
-          prevEl: parentEl.querySelector(".swiper-button-prev"),
-        },
-        // pagination: {
-        //   el: parentEl.querySelector(".swiper-pagination"),
-        // },
-
-      });
-    }
-  })('.holidays-held__slider');
-
-  (function turnkeyHolidaySlider() {
+  (function sliderArrowCenter() {
     const swiper = new Swiper(".slider-center", {
       slidesPerView: 'auto',
       loop: true,
@@ -131,29 +96,6 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     });
   })();
-
-  // const swiper22 = new Swiper(".holidays-held__slider .slider", {
-  //   slidesPerView: 'auto',
-  //   spaceBetween: 30,
-  //   breakpoints: {
-  //     320: {
-  //       spaceBetween: 20,
-  //       slidesPerView: 1.2,
-  //     },
-  //     576: {
-  //       slidesPerView: 2,
-  //       spaceBetween: 30,
-  //     },
-  //     991: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 30,
-  //     },
-  //   },
-  //   navigation: {
-  //     nextEl: ".swiper-button-next",
-  //     prevEl: ".swiper-button-prev",
-  //   },
-  // });
 
   // * ==== Dropdown
   document.addEventListener('click', e => {
@@ -300,13 +242,20 @@ window.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.querySelector('.header__menu--mobile');
     const menu = document.querySelector('.menu-mobile');
     const body = document.querySelector('body');
-    // const overlay = document.querySelector('.overlay');
+    const links = document.querySelectorAll('.menu-mobile__link');
 
     menuBtn.addEventListener('click', e => {
       menu.classList.toggle('active');
       menuBtn.classList.toggle('active');
-      // overlay.classList.toggle('active');
       body.classList.toggle('no-scroll');
+    });
+
+    links.forEach(l => {
+      l.addEventListener('click', e => {
+        menu.classList.remove('active');
+        menuBtn.classList.remove('active');
+        body.classList.remove('no-scroll');
+      });
     });
   })();
 

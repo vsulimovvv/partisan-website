@@ -6,8 +6,6 @@
   background-position: center center;
   overflow-x: hidden;
 
-  &__wrapper {}
-
   &__offer {
     text-align: center;
     max-width: 805px;
@@ -41,7 +39,5 @@
     .swiper-wrapper {
       padding-left: 500px;
     }
-
-    .swiper-slide {}
   }
 }
