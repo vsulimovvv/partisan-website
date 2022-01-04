@@ -5,6 +5,7 @@
 @import 'fonts';
 @import 'global';
 @import './animations';
+
 // * ==== Components
 @import './components/header.scss';
 @import './components/footer';
@@ -16,8 +17,11 @@
 @import './components/filter-buttons';
 @import './components/arrow-pagination-slider';
 @import './components/form-submit';
+@import './components/breadcrumbs';
+
 // * ==== Menu
 @import './components/menu-mobile';
+
 // * ==== Cards
 @import './components/card-course';
 @import './components/card-gift';
@@ -32,6 +36,7 @@
 @import './components/card-filters';
 @import './components/card-turnkey-holiday';
 @import './components/card-news';
+
 // * ==== Sections
 @import './components/section-courses';
 @import './components/section-birthday';

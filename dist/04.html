@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+ <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- Fancybox -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
+ <!-- nouislider -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
+
+ <!-- Simple Bar -->
+ <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+
+ <!-- Custom Link -->
+ <link rel="stylesheet" href="css/style.min.css">
+
+  <title>Партизан</title>
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <div class="overlay"></div>
+    <header class="header">
+  <div class="menu-mobile">
+    <ul class="menu-mobile__list" data-simplebar>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Главная</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Все услуги</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Детские праздники</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Корпоративы</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Выездные мероприятия</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Школа мужского развития</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Новости и Акции</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Подарочный сертификат</a>
+      </li>
+    </ul>
+
+    <div class="menu-mobile__bottom" data-simplebar>
+      <div class="menu-mobile__box">
+        <a class="city" href="#">Ульяновск</a>
+        <a class="menu-mobile__btn btn btn--small" href="#">Как добраться</a>
+      </div>
+
+      <div class="menu-mobile__box">
+        <a class="tel" href="#">33 - 54 - 62</a>
+        <a class="menu-mobile__btn btn btn--no-shadow" href="#">Обратный звонок</a>
+      </div>
+
+      <div class="menu-mobile__box">
+        <div class="socials-mobile">
+          <p class="socials-mobile__text">Соц сети: </p>
+          <ul class="socials-mobile__list">
+            <li class="socials-mobile__item">
+              <a class="socials-mobile__link socials-mobile__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
+            </li>
+            <li class="socials-mobile__item">
+              <a class="socials-mobile__link socials-mobile__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="header__wrapper">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-wrapp">
+          <address class="header__location">
+            <a class="header__link city" href="#">Ульяновск</a>
+            <a class="header__link route" href="#">Как добраться</a>
+          </address>
+          <div class="header__socials socials">
+            <p class="socials__text">Соц сети: </p>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__messengers phones-box">
+            <div class="messengers">
+              <ul class="messengers__list">
+                <li class="messenger__item">
+                  <a class="messengers__link messengers__link--whatsapp" href="#"
+                    aria-label="Напишите или позвоните нам в ватсап"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--viber" href="#"
+                    aria-label="Напишите или позвоните нам в вайбер"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--telegram" href="#"
+                    aria-label="Напишите или позвоните нам в телеграм"></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="phones-box__calls">
+              <a class="header__link phones-box__link phones-box__link--back-call" href="tel:335462">Обратный звонок</a>
+              <a class="header__link phones-box__link phones-box__link--phone" href="tel:335462">33 - 54 - 62</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom--wrapp">
+          <div class="header__menu header__menu--mobile">
+            <button class="header__toggle" type="button">
+              <span class="header__toggle-line"></span>
+            </button>
+          </div>
+
+          <div class="header__menu" data-dropdown>
+            <button class="header__toggle" type="button" data-dropdown-button>
+              <span class="header__toggle-line"></span>
+            </button>
+            <span class="header__text">Меню</span>
+            <div class="main-menu">
+              <ul class="main-menu__list">
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Главная</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Все услуги</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Корпоративы</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Выездные мероприятия</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Новости и акции</a>
+                </li>
+              </ul>
+              <button class="main-menu__btn btn btn--no-shot" type="button">Заказать звонок</button>
+            </div>
+          </div>
+
+          <a class="header__logo-mobile" href="#">
+            <img src="images/logo.svg" alt="Лого">
+          </a>
+
+          <a class="header__phone-mobile" href="tel:335462"></a>
+
+          <div class="header__row-menu row-menu">
+            <ul class="row-menu__list">
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Детям</a>
+              </li>
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Взрослым</a>
+              </li>
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Школа мужского развития</a>
+              </li>
+            </ul>
+            <a class="header__btn btn btn--flat" href="#">Подарочный сертификат</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    <main class="main">
+      <section class="hero hero--corporate">
+  <div class="container">
+    <div class="hero__offer">
+      <a class="hero__logo" href="#">
+        <img src="images/logo.svg" alt="#">
+      </a>
+
+      <h1 class="hero__title main-title">Корпоративы</h1>
+    </div>
+  </div>
+</section>
+      <section class="entertainments entertainments--no-bg">
+  <div class="container">
+    <h2 class="entertainments__title section-title">Все развлечения для взрослых</h2>
+
+    <div class="entertainments__wrapper">
+      <div class="entertainments__slider">
+        <div class="slider swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <article class="entertainment-card">
+                <div class="entertainment-card__img">
+                  <img src="images/content/entertainments/1.jpg" alt="Лазертаг">
+                </div>
+                <div class="entertainment-card__info">
+                  <div class="entertainment-card__top">
+                    <span class="entertainment-card__badge badge badge--hit">Хит</span>
+                    <h3 class="entertainment-card__title">Лазертаг</h3>
+                    <span class="entertainment-card__text">"Мама, это было так круто"</span>
+                  </div>
+                  <div class="entertainment-card__bottom">
+                    <p class="entertainment-card__price">3 500 <span>₽</span> </p>
+                    <button class="entertainment-card__btn btn btn--small">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide">
+              <article class="entertainment-card">
+                <div class="entertainment-card__img">
+                  <img src="images/content/entertainments/1.jpg" alt="Лазертаг">
+                </div>
+                <div class="entertainment-card__info">
+                  <div class="entertainment-card__top">
+                    <span class="entertainment-card__badge badge badge--hit">Хит</span>
+                    <h3 class="entertainment-card__title">Лазертаг</h3>
+                    <span class="entertainment-card__text">"Мама, это было так круто"</span>
+                  </div>
+                  <div class="entertainment-card__bottom">
+                    <p class="entertainment-card__price">3 500 <span>₽</span> </p>
+                    <button class="entertainment-card__btn btn btn--small">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide">
+              <article class="entertainment-card">
+                <div class="entertainment-card__img">
+                  <img src="images/content/entertainments/1.jpg" alt="Лазертаг">
+                </div>
+                <div class="entertainment-card__info">
+                  <div class="entertainment-card__top">
+                    <span class="entertainment-card__badge badge badge--hit">Хит</span>
+                    <h3 class="entertainment-card__title">Лазертаг</h3>
+                    <span class="entertainment-card__text">"Мама, это было так круто"</span>
+                  </div>
+                  <div class="entertainment-card__bottom">
+                    <p class="entertainment-card__price">3 500 <span>₽</span> </p>
+                    <button class="entertainment-card__btn btn btn--small">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide">
+              <article class="entertainment-card">
+                <div class="entertainment-card__img">
+                  <img src="images/content/entertainments/1.jpg" alt="Лазертаг">
+                </div>
+                <div class="entertainment-card__info">
+                  <div class="entertainment-card__top">
+                    <span class="entertainment-card__badge badge badge--hit">Хит</span>
+                    <h3 class="entertainment-card__title">Лазертаг</h3>
+                    <span class="entertainment-card__text">"Мама, это было так круто"</span>
+                  </div>
+                  <div class="entertainment-card__bottom">
+                    <p class="entertainment-card__price">3 500 <span>₽</span> </p>
+                    <button class="entertainment-card__btn btn btn--small">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide">
+              <article class="entertainment-card">
+                <div class="entertainment-card__img">
+                  <img src="images/content/entertainments/1.jpg" alt="Лазертаг">
+                </div>
+                <div class="entertainment-card__info">
+                  <div class="entertainment-card__top">
+                    <span class="entertainment-card__badge badge badge--hit">Хит</span>
+                    <h3 class="entertainment-card__title">Лазертаг</h3>
+                    <span class="entertainment-card__text">"Мама, это было так круто"</span>
+                  </div>
+                  <div class="entertainment-card__bottom">
+                    <p class="entertainment-card__price">3 500 <span>₽</span> </p>
+                    <button class="entertainment-card__btn btn btn--small">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide">
+              <article class="entertainment-card">
+                <div class="entertainment-card__img">
+                  <img src="images/content/entertainments/1.jpg" alt="Лазертаг">
+                </div>
+                <div class="entertainment-card__info">
+                  <div class="entertainment-card__top">
+                    <span class="entertainment-card__badge badge badge--hit">Хит</span>
+                    <h3 class="entertainment-card__title">Лазертаг</h3>
+                    <span class="entertainment-card__text">"Мама, это было так круто"</span>
+                  </div>
+                  <div class="entertainment-card__bottom">
+                    <p class="entertainment-card__price">3 500 <span>₽</span> </p>
+                    <button class="entertainment-card__btn btn btn--small">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide">
+              <article class="entertainment-card">
+                <div class="entertainment-card__img">
+                  <img src="images/content/entertainments/1.jpg" alt="Лазертаг">
+                </div>
+                <div class="entertainment-card__info">
+                  <div class="entertainment-card__top">
+                    <span class="entertainment-card__badge badge badge--hit">Хит</span>
+                    <h3 class="entertainment-card__title">Лазертаг</h3>
+                    <span class="entertainment-card__text">"Мама, это было так круто"</span>
+                  </div>
+                  <div class="entertainment-card__bottom">
+                    <p class="entertainment-card__price">3 500 <span>₽</span> </p>
+                    <button class="entertainment-card__btn btn btn--small">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide">
+              <article class="entertainment-card">
+                <div class="entertainment-card__img">
+                  <img src="images/content/entertainments/1.jpg" alt="Лазертаг">
+                </div>
+                <div class="entertainment-card__info">
+                  <div class="entertainment-card__top">
+                    <span class="entertainment-card__badge badge badge--hit">Хит</span>
+                    <h3 class="entertainment-card__title">Лазертаг</h3>
+                    <span class="entertainment-card__text">"Мама, это было так круто"</span>
+                  </div>
+                  <div class="entertainment-card__bottom">
+                    <p class="entertainment-card__price">3 500 <span>₽</span> </p>
+                    <button class="entertainment-card__btn btn btn--small">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div class="swiper-button-next"> <img src="images/arrow-next.png" alt=""></div>
+        <div class="swiper-button-prev"> <img src="images/arrow-prev.png" alt=""></div>
+      </div>
+
+      <button class="entertainments__btn btn btn--small">Смотреть все развлечения</button>
+    </div>
+  </div>
+</section>
+      <section class="conference-hall">
+  <div class="container">
+    <h2 class="conference-hall__title section-title">Большой конференц-зал</h2>
+
+    <div class="conference-hall__content active">
+      <div class="conference-hall__slider">
+        <div class="slider-center swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <img src="images/content/about-slider/1.jpg" alt="">
+            </li>
+            <li class="swiper-slide">
+              <img src="images/content/about-slider/1.jpg" alt="">
+            </li>
+            <li class="swiper-slide">
+              <img src="images/content/about-slider/1.jpg" alt="">
+            </li>
+          </ul>
+          <button class="swiper-button-next" type="button" aria-label="Посмотреть следующий слайд">
+            <!-- <svg>
+              <use xlink:href="images/sprite.svg#arrow-next"></use>
+            </svg> -->
+            <img src="images/arrow-next.png" alt="">
+          </button>
+          <button class="swiper-button-prev" type="button" aria-label="Посмотреть предыдущий слайд">
+            <!-- <svg>
+              <use xlink:href="images/spite.svg#arrow-prev"></use>
+            </svg> -->
+            <img src="images/arrow-prev.png" alt="">
+
+          </button>
+        </div>
+      </div>
+      <div class="conference-hall__info">
+        <div class="conference-hall__top">
+          <p>Светлая и большая зона, адаптируемая под любой стиль праздника.</p>
+          <span class="conference-hall__name">В вашем распоряжении:</span>
+          <ul class="conference-hall__list">
+            <li class="conference-hall__item">Аэрохоккей</li>
+            <li class="conference-hall__item">Стена для рисования</li>
+            <li class="conference-hall__item">VR-аттракцион</li>
+            <li class="conference-hall__item">Настольные игры</li>
+          </ul>
+        </div>
+        <div class="conference-hall__bottom">
+          <div class="conference-hall__details">
+            <div class="conference-hall__detail">
+              Вмещает <span> до 40 человек</span>
+            </div>
+            <div class="conference-hall__detail">
+              Стоимость аренды <span> 6 500 ₽/час</span>
+            </div>
+          </div>
+
+          <button class="conference-hall__btn btn btn--no-shot" type="button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="package-offers">
+  <div class="container">
+    <div class="package-offers__offer">
+      <h2 class="package-offers__title section-title">Пакетные предложения</h2>
+      <p class="package-offers__text">Вы также можете заказать индивидуальный сценарий</p>
+    </div>
+
+    <ul class="package-offers__items">
+      <li class="package-offers__item">
+        <article class="package-offers-card">
+
+          <h3 class="package-offers-card__title">Минимум</h3>
+          <ul class="package-offers-card__list">
+            <li class="package-offers-card__item">Аэрохоккей</li>
+            <li class="package-offers-card__item">Стена для рисования</li>
+            <li class="package-offers-card__item">VR-аттракцион</li>
+            <li class="package-offers-card__item">Настольные игры</li>
+            <li class="package-offers-card__item">VR-аттракцион</li>
+            <li class="package-offers-card__item">Настольные игры</li>
+          </ul>
+
+          <div class="package-offers-card__details">
+            <div class="package-offers-card__price">
+              <p>Цена: <span>5800 / 7800</span></p>
+            </div>
+            <p class="package-offers-card__text">Для компании до 10 чел</p>
+          </div>
+
+          <button class="package-offers-card__btn btn btn--small">Оставить заявку</button>
+        </article>
+      </li>
+      <li class="package-offers__item">
+        <article class="package-offers-card">
+
+          <h3 class="package-offers-card__title">Минимум</h3>
+          <ul class="package-offers-card__list">
+            <li class="package-offers-card__item">Аэрохоккей</li>
+            <li class="package-offers-card__item">Стена для рисования</li>
+            <li class="package-offers-card__item">VR-аттракцион</li>
+            <li class="package-offers-card__item">Настольные игры</li>
+            <li class="package-offers-card__item">VR-аттракцион</li>
+            <li class="package-offers-card__item">Настольные игры</li>
+          </ul>
+
+          <div class="package-offers-card__details">
+            <div class="package-offers-card__price">
+              <p>Цена: <span>5800 / 7800</span></p>
+            </div>
+            <p class="package-offers-card__text">Для компании до 10 чел</p>
+          </div>
+
+          <button class="package-offers-card__btn btn btn--small">Оставить заявку</button>
+        </article>
+      </li>
+      <li class="package-offers__item">
+        <article class="package-offers-card">
+
+          <h3 class="package-offers-card__title">Минимум</h3>
+          <ul class="package-offers-card__list">
+            <li class="package-offers-card__item">Аэрохоккей</li>
+            <li class="package-offers-card__item">Стена для рисования</li>
+            <li class="package-offers-card__item">VR-аттракцион</li>
+            <li class="package-offers-card__item">Настольные игры</li>
+            <li class="package-offers-card__item">VR-аттракцион</li>
+            <li class="package-offers-card__item">Настольные игры</li>
+          </ul>
+
+          <div class="package-offers-card__details">
+            <div class="package-offers-card__price">
+              <p>Цена: <span>5800 / 7800</span></p>
+            </div>
+            <p class="package-offers-card__text">Для компании до 10 чел</p>
+          </div>
+
+          <button class="package-offers-card__btn btn btn--small">Оставить заявку</button>
+        </article>
+      </li>
+      <li class="package-offers__item">
+        <article class="package-offers-card">
+
+          <h3 class="package-offers-card__title">Минимум</h3>
+          <ul class="package-offers-card__list">
+            <li class="package-offers-card__item">Аэрохоккей</li>
+            <li class="package-offers-card__item">Стена для рисования</li>
+            <li class="package-offers-card__item">VR-аттракцион</li>
+            <li class="package-offers-card__item">Настольные игры</li>
+            <li class="package-offers-card__item">VR-аттракцион</li>
+            <li class="package-offers-card__item">Настольные игры</li>
+          </ul>
+
+          <div class="package-offers-card__details">
+            <div class="package-offers-card__price">
+              <p>Цена: <span>5800 / 7800</span></p>
+            </div>
+            <p class="package-offers-card__text">Для компании до 10 чел</p>
+          </div>
+
+          <button class="package-offers-card__btn btn btn--small">Оставить заявку</button>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+      <section class="holidays-held">
+  <div class="container">
+    <h2 class="holidays-held__title section-title">Проведенные праздники</h2>
+    <p class="holidays-held__undertitle">За 4 года мы провели более 5000 мероприятий!</p>
+
+    <div class="holidays-held__slider">
+      <div class="slider swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <img src="images/content/holidays-held/1.jpg" alt="Фото 1">
+          </li>
+          <li class="swiper-slide">
+            <img src="images/content/holidays-held/2.jpg" alt="Фото 1">
+          </li>
+          <li class="swiper-slide">
+            <img src="images/content/holidays-held/3.jpg" alt="Фото 1">
+          </li>
+          <li class="swiper-slide">
+            <img src="images/content/holidays-held/2.jpg" alt="Фото 1">
+          </li>
+          <li class="swiper-slide">
+            <img src="images/content/holidays-held/1.jpg" alt="Фото 1">
+          </li>
+          <li class="swiper-slide">
+            <img src="images/content/holidays-held/3.jpg" alt="Фото 1">
+          </li>
+          <li class="swiper-slide">
+            <img src="images/content/holidays-held/1.jpg" alt="Фото 1">
+          </li>
+          <li class="swiper-slide">
+            <img src="images/content/holidays-held/2.jpg" alt="Фото 1">
+          </li>
+        </ul>
+      </div>
+
+      <div class="swiper-button-next"> <img src="images/arrow-next.png" alt=""></div>
+      <div class="swiper-button-prev"> <img src="images/arrow-prev.png" alt=""></div>
+    </div>
+  </div>
+</section>
+      <section class="section-form-submit">
+  <div class="container">
+    <h2 class="section-form-submit__title section-title">Хотите заказать мероприятие или детский праздник</h2>
+
+    <div class="section-form-submit__wrapper">
+      <div class="section-form-submit__manager manager-badge">
+        <h3 class="manager-badge__title">Анастасия Морозова</h3>
+        <p class="manager-badge__text">управляющая развлекательным центром“Партизан”</p>
+      </div>
+      <div class="section-form-submit__form-submit">
+        <form class="form-submit" action="/">
+          <h3 class="form-submit__title">Оставьте свои контактные данные, <span>мы свяжемся с вами в ближайшее
+              время!</span>
+          </h3>
+
+          <label class="form-submit__group">
+            <input class="form-submit__input" type="text" placeholder="Ваше имя" name="name" required>
+          </label>
+          <label class="form-submit__group">
+            <input class="form-submit__input" type="tel" placeholder="Телефон" name="tel" required>
+          </label>
+          <label class="form-submit__group">
+            <textarea class="form-submit__input form-submit__input--textarea" name="message"
+              placeholder="Ваши пожелания по празднику" required></textarea>
+          </label>
+
+          <button class="form-submit__btn btn" type="submit">Оставить заявку</button>
+
+          <p class="form-submit__text">Нажимая кнопку «Оставить заявку», вы соглашаетесь с <span>политикой
+              конфиденциальности</span>
+          </p>
+        </form>
+      </div>
+      <div class="decor cube"></div>
+      <div class="decor gun"></div>
+    </div>
+  </div>
+</section>
+      <section class="additional-services">
+  <div class="container">
+    <div class="additional-services__wrapper">
+      <h2 class="additional-services__title section-title">Шаг 3. Выберите дополнительные услуги</h2>
+      <p class="additional-services__text">Мы позаботимся о каждой детали на вашем мероприятии</p>
+      <ul class="additional-services__items">
+        <li class="additional-services__item">
+          <article class="additional-service-card">
+            <div class="additional-service-card__img">
+              <img src="images/content/additional-service/1.png" alt="Шоу-программы">
+            </div>
+            <h3 class="additional-service-card__title">Шоу-программы</h3>
+
+            <button class="additional-service-card__btn btn btn--small">Заказать</button>
+          </article>
+        </li>
+        <li class="additional-services__item">
+          <article class="additional-service-card">
+            <div class="additional-service-card__img">
+              <img src="images/content/additional-service/1.png" alt="Шоу-программы">
+            </div>
+            <h3 class="additional-service-card__title">Шоу-программы</h3>
+
+            <button class="additional-service-card__btn btn btn--small">Заказать</button>
+          </article>
+        </li>
+        <li class="additional-services__item">
+          <article class="additional-service-card">
+            <div class="additional-service-card__img">
+              <img src="images/content/additional-service/1.png" alt="Шоу-программы">
+            </div>
+            <h3 class="additional-service-card__title">Шоу-программы</h3>
+
+            <button class="additional-service-card__btn btn btn--small">Заказать</button>
+          </article>
+        </li>
+        <li class="additional-services__item">
+          <article class="additional-service-card">
+            <div class="additional-service-card__img">
+              <img src="images/content/additional-service/1.png" alt="Шоу-программы">
+            </div>
+            <h3 class="additional-service-card__title">Шоу-программы</h3>
+
+            <button class="additional-service-card__btn btn btn--small">Заказать</button>
+          </article>
+        </li>
+        <li class="additional-services__item">
+          <article class="additional-service-card">
+            <div class="additional-service-card__img">
+              <img src="images/content/additional-service/1.png" alt="Шоу-программы">
+            </div>
+            <h3 class="additional-service-card__title">Шоу-программы</h3>
+
+            <button class="additional-service-card__btn btn btn--small">Заказать</button>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+      <section class="contacts contacts--no-bg">
+  <div class="container">
+    <div class="contacts__wrapper">
+      <div class="contacts__info">
+        <h2 class="contacts__title section-title">Как нас найти</h2>
+        <div class="contacts__box">
+          <address class="address">
+            <p>г. Ульяновск, ул. Октябрьская, 22Г к1
+            </p>
+            <a class="contacts__link" href="#">Как добраться</a>
+          </address>
+          <div class="schedule">
+            <p>Время работы игрового центра:
+            </p>
+            <span>ПН-ВС: 10:00 — 00:00</span>
+            <span>Без перерывов и выходных</span>
+          </div>
+        </div>
+        <div class="contacts__box contacts__box--contacts">
+          <span class="contacts__box-title">Контакты</span>
+          <div class="contacts__box-wrapper">
+            <a class="contacts__phone" href="#">33 - 54 - 62</a>
+            <div class="messengers">
+              <ul class="messengers__list">
+                <li class="messenger__item">
+                  <a class="messengers__link messengers__link--whatsapp" href="#"
+                    aria-label="Напишите или позвоните нам в ватсап"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--viber" href="#"
+                    aria-label="Напишите или позвоните нам в вайбер"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--telegram" href="#"
+                    aria-label="Напишите или позвоните нам в телеграм"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts__socials socials">
+          <p class="socials__text">Присоединятейсь к нашей семье: </p>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contacts__map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A8a581bd4d04f1a0b73245f83ef11e375c10bd2728bb8e89c6973c596871ef4dd&amp;source=constructor"
+          width="670" height="454" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+      <div class="section-bg">
+  <section class="big-company">
+    <div class="container">
+      <div class="big-company__label">
+        <img src="images/logo.svg" alt="логотип">
+      </div>
+      <h2 class="big-company__title section-title">Мероприятия для больших компаний</h2>
+
+      <div class="big-company__wrapper">
+        <div class="big-company__slider">
+          <div class="slider-center swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <img src="images/content/about-slider/1.jpg" alt="">
+              </li>
+              <li class="swiper-slide">
+                <img src="images/content/about-slider/1.jpg" alt="">
+              </li>
+              <li class="swiper-slide">
+                <img src="images/content/about-slider/1.jpg" alt="">
+              </li>
+            </ul>
+            <button class="swiper-button-next" type="button" aria-label="Посмотреть следующий слайд">
+              <!-- <svg>
+                <use xlink:href="images/sprite.svg#arrow-next"></use>
+              </svg> -->
+              <img src="images/arrow-next.png" alt="">
+            </button>
+            <button class="swiper-button-prev" type="button" aria-label="Посмотреть предыдущий слайд">
+              <!-- <svg>
+                <use xlink:href="images/spite.svg#arrow-prev"></use>
+              </svg> -->
+              <img src="images/arrow-prev.png" alt="">
+
+            </button>
+          </div>
+        </div>
+        <div class="big-company__info">
+          <p>Если Вы хотите испытать себя в стрельбе, но боитесь стрелять из оружия, то Вам отлично подойдет стрельба в
+            нашем интерактивном тире. В нем <span> Вы не получите никаких травм</span>, в нём Вы получите только
+            положительные эмоции,
+            за которыми будете возвращаться к нам снова и снова.
+          </p>
+          <p>
+            <span> Наш клуб организовывает мероприятия, как для самых юных гостей, так и для взрослых.</span> Самым
+            маленьким нашим
+            гостям мы хотим предложить анимационную программу. В неё включены игры, розыгрыши, проводимые аниматором,
+            который не даст заскучать ребенку ни на секунду. А самым взрослым гостям мы предлагаем услугу проведения
+            корпоративов. </p>
+          <p>Если Вы хотите еще больше сдружиться со своим коллективом и провести необычный выходной день вне рабоче
+            офиса, то Вам к нам!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-videos">
+    <div class="container">
+      <h2 class="our-videos__title section-title">Посомтрите видео</h2>
+      <p class="our-videos__text">Эмоции наших гостец скажут больше, чем просто слова!</p>
+
+      <div class="our-videos__wrapper">
+        <div class="slider-videos swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="video-card">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
+                  <button class=" video-card__play" type="button" aria-label="Посмотреть видео">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-btn"></use>
+                    </svg>
+                  </button>
+                  <img src="images/content/our-videos/2.jpg" alt="Видео про День в армии">
+                </div>
+                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="video-card">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
+                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-btn"></use>
+                    </svg>
+                  </button>
+                  <img src="images/content/our-videos/1.jpg" alt="Видео про День в армии">
+                </div>
+                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="video-card">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
+                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-btn"></use>
+                    </svg>
+                  </button>
+                  <img src="images/content/our-videos/3.jpg" alt="Видео про День в армии">
+                </div>
+                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="video-card">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
+                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-btn"></use>
+                    </svg>
+                  </button>
+                  <img src="images/content/our-videos/2.jpg" alt="Видео про День в армии">
+                </div>
+                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="video-card">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
+                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-btn"></use>
+                    </svg>
+                  </button>
+                  <img src="images/content/our-videos/3.jpg" alt="Видео про День в армии">
+                </div>
+                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="video-card">
+                <div class="video-card__img" data-fancybox="responsive"
+                  data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s">
+                  <button class="video-card__play" type="button" aria-label="Посмотреть видео">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-btn"></use>
+                    </svg>
+                  </button>
+                  <img src="images/content/our-videos/1.jpg" alt="Видео про День в армии">
+                </div>
+                <h3 class="video-card__name">Лазертаг-приключение "День в армии"</h3>
+              </div>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+    </main>
+    <footer class="footer">
+  <div class="container">
+
+    <h2 class="footer__title section-title">Ого! вы долистали до конца</h2>
+
+    <div class="footer__wrapper">
+      <div class="footer__cols">
+        <a class="footer__logo logo" href="">
+          <img src="images/logo.svg" alt="Логотип">
+        </a>
+        <p>Центр развлечения для детей и взрослых в Ульяновске</p>
+        <a class="footer__policy" href="#">Политика конфиденциальности</a>
+        <p>Copyright 2006-2020 г.</p>
+      </div>
+
+      <div class="footer__lists">
+        <div class="">
+          <h3 class="footer__cols-title">Гостям</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Главная страница</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Все услуги</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Новости и акции</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Подарочные сертификаты</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <h3 class="footer__cols-title">Услуги</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Все развлечения</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Детские праздники</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Корпоративные мероприятия</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Выездные мероприятия</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Лазертаг</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Анимация</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__cols">
+        <h3 class="footer__cols-title">О центре</h3>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Контактная информация
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Юридическая информация</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">3D-тур</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Франшиза</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__cols">
+        <h3 class="footer__cols-title">Контакты</h3>
+
+        <address class="footer__location">
+          <a class="city" href="#">Ульяновск</a>
+          <a class="route" href="#">Как добраться</a>
+        </address>
+        <address class="footer__phone">
+          <a class="phone" href="tel:33-54-62">33 - 54 - 62</a>
+          <a class="text" href="#">Обратный звонок</a>
+        </address>
+
+        <div class="footer__messengers messengers">
+          <ul class="messengers__list">
+            <li class="messenger__item">
+              <a class="messengers__link messengers__link--whatsapp" href="#"
+                aria-label="Напишите или позвоните нам в ватсап"></a>
+            </li>
+            <li class="messengers__item">
+              <a class="messengers__link messengers__link--viber" href="#"
+                aria-label="Напишите или позвоните нам в вайбер"></a>
+            </li>
+            <li class="messengers__item">
+              <a class="messengers__link messengers__link--telegram" href="#"
+                aria-label="Напишите или позвоните нам в телеграм"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__socials socials">
+          <span class="socials__text">Соц сети: </span>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+
+    <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- nouislider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- Fancybox -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+  <!-- MixitUp -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+
+  <!-- Simple Bar Js  -->
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+  <!-- JS -->
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

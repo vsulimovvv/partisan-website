@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+ <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- Fancybox -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
+ <!-- nouislider -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
+
+ <!-- Simple Bar -->
+ <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+
+ <!-- Custom Link -->
+ <link rel="stylesheet" href="css/style.min.css">
+
+  <title>Партизан</title>
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <div class="overlay"></div>
+    <header class="header">
+  <div class="menu-mobile">
+    <ul class="menu-mobile__list" data-simplebar>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Главная</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Все услуги</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Детские праздники</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Корпоративы</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Выездные мероприятия</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Школа мужского развития</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Новости и Акции</a>
+      </li>
+      <li class="menu-mobile__item">
+        <a class="menu-mobile__link" href="#">Подарочный сертификат</a>
+      </li>
+    </ul>
+
+    <div class="menu-mobile__bottom" data-simplebar>
+      <div class="menu-mobile__box">
+        <a class="city" href="#">Ульяновск</a>
+        <a class="menu-mobile__btn btn btn--small" href="#">Как добраться</a>
+      </div>
+
+      <div class="menu-mobile__box">
+        <a class="tel" href="#">33 - 54 - 62</a>
+        <a class="menu-mobile__btn btn btn--no-shadow" href="#">Обратный звонок</a>
+      </div>
+
+      <div class="menu-mobile__box">
+        <div class="socials-mobile">
+          <p class="socials-mobile__text">Соц сети: </p>
+          <ul class="socials-mobile__list">
+            <li class="socials-mobile__item">
+              <a class="socials-mobile__link socials-mobile__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
+            </li>
+            <li class="socials-mobile__item">
+              <a class="socials-mobile__link socials-mobile__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="header__wrapper">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-wrapp">
+          <address class="header__location">
+            <a class="header__link city" href="#">Ульяновск</a>
+            <a class="header__link route" href="#">Как добраться</a>
+          </address>
+          <div class="header__socials socials">
+            <p class="socials__text">Соц сети: </p>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__messengers phones-box">
+            <div class="messengers">
+              <ul class="messengers__list">
+                <li class="messenger__item">
+                  <a class="messengers__link messengers__link--whatsapp" href="#"
+                    aria-label="Напишите или позвоните нам в ватсап"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--viber" href="#"
+                    aria-label="Напишите или позвоните нам в вайбер"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--telegram" href="#"
+                    aria-label="Напишите или позвоните нам в телеграм"></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="phones-box__calls">
+              <a class="header__link phones-box__link phones-box__link--back-call" href="tel:335462">Обратный звонок</a>
+              <a class="header__link phones-box__link phones-box__link--phone" href="tel:335462">33 - 54 - 62</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom--wrapp">
+          <div class="header__menu header__menu--mobile">
+            <button class="header__toggle" type="button">
+              <span class="header__toggle-line"></span>
+            </button>
+          </div>
+
+          <div class="header__menu" data-dropdown>
+            <button class="header__toggle" type="button" data-dropdown-button>
+              <span class="header__toggle-line"></span>
+            </button>
+            <span class="header__text">Меню</span>
+            <div class="main-menu">
+              <ul class="main-menu__list">
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Главная</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Все услуги</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Корпоративы</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Выездные мероприятия</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Новости и акции</a>
+                </li>
+              </ul>
+              <button class="main-menu__btn btn btn--no-shot" type="button">Заказать звонок</button>
+            </div>
+          </div>
+
+          <a class="header__logo-mobile" href="#">
+            <img src="images/logo.svg" alt="Лого">
+          </a>
+
+          <a class="header__phone-mobile" href="tel:335462"></a>
+
+          <div class="header__row-menu row-menu">
+            <ul class="row-menu__list">
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Детям</a>
+              </li>
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Взрослым</a>
+              </li>
+              <li class="row-menu__item">
+                <a class="row-menu__link" href="#">Школа мужского развития</a>
+              </li>
+            </ul>
+            <a class="header__btn btn btn--flat" href="#">Подарочный сертификат</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    <main class="main">
+      <section class="hero hero--news">
+  <div class="container">
+    <div class="hero__offer">
+      <a class="hero__logo" href="#">
+        <img src="images/logo.svg" alt="#">
+      </a>
+
+      <h1 class="hero__title main-title">Новости и акции</h1>
+    </div>
+  </div>
+</section>
+      <section class="birthday birthday--no-title">
+  <div class="container">
+    <h2 class="birthday__title section-title visually-hidden">
+      День Рождения под ключ
+    </h2>
+    <div class="birthday__wrapper">
+      <div class="decor center"></div>
+      <div class="decor circle"></div>
+      <div class="decor star"></div>
+      <div class="decor triangle"></div>
+      <div class="decor triangle-2"></div>
+      <div class="decor corner"></div>
+      <ul class="birthday__items">
+        <li class="birthday__item">
+          <button class="birthday__btn btn btn--small">Узнать подробнее</button>
+        </li>
+        <li class="birthday__item">
+          <button class="birthday__btn btn btn--small">Узнать подробнее</button>
+        </li>
+        <li class="birthday__item">
+          <button class="birthday__btn btn btn--small">Узнать подробнее</button>
+        </li>
+        <li class="birthday__item">
+          <button class="birthday__btn btn btn--small">Узнать подробнее</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+      <section class="emotions">
+  <div class="container">
+    <div class="emotions__wrapper">
+      <div class="emotions__birthday">
+        <div class="card-birthday">
+          <div class="card-birthday__preview">
+            <div class="card-birthday__img">
+              <img src="images/content/card-birthday/top.jpg" alt="Наши фото"></div>
+            <div class="card-birthday__img">
+              <img src="images/content/card-birthday/middle.jpg" alt="Наши фото"></div>
+            <div class="card-birthday__img">
+              <img src="images/content/card-birthday/bottom.jpg" alt="Наши фото"></div>
+          </div>
+          <div class="card-birthday__info">
+            <h3 class="card-birthday__title">🎉День рождения в теплое время года – это миллион вариантов, как провести
+              его
+              максимально весело и зажигательно!
+            </h3>
+            <div class="card-birthday__text">
+              <p>Лазертаг-приключения, нерф, анимация, интерактивы… И это далеко не все, что
+                мы
+                можем вам предложить. Специально для вашего удобства мы собрали все самое необходимое для праздника в
+                пакеты
+                услуг🎁. Вам остается только выбрать и забронировать нужную дату.</p>
+              <p>Наши развлечения одинаково <span> нравятся и детям, и взрослым😉</span>, поэтому свою порцию радости и
+                веселья
+                получат
+                все гости независимо от возраста! Сколько бы времени не было отведено на программу, всегда хочется еще!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+      <section class="contacts contacts--bg">
+  <div class="container">
+    <div class="contacts__wrapper">
+      <div class="contacts__info">
+        <h2 class="contacts__title section-title">Как нас найти</h2>
+        <div class="contacts__box">
+          <address class="address">
+            <p>г. Ульяновск, ул. Октябрьская, 22Г к1
+            </p>
+            <a class="contacts__link" href="#">Как добраться</a>
+          </address>
+          <div class="schedule">
+            <p>Время работы игрового центра:
+            </p>
+            <span>ПН-ВС: 10:00 — 00:00</span>
+            <span>Без перерывов и выходных</span>
+          </div>
+        </div>
+        <div class="contacts__box contacts__box--contacts">
+          <span class="contacts__box-title">Контакты</span>
+          <div class="contacts__box-wrapper">
+            <a class="contacts__phone" href="#">33 - 54 - 62</a>
+            <div class="messengers">
+              <ul class="messengers__list">
+                <li class="messenger__item">
+                  <a class="messengers__link messengers__link--whatsapp" href="#"
+                    aria-label="Напишите или позвоните нам в ватсап"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--viber" href="#"
+                    aria-label="Напишите или позвоните нам в вайбер"></a>
+                </li>
+                <li class="messengers__item">
+                  <a class="messengers__link messengers__link--telegram" href="#"
+                    aria-label="Напишите или позвоните нам в телеграм"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts__socials socials">
+          <p class="socials__text">Присоединятейсь к нашей семье: </p>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contacts__map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A8a581bd4d04f1a0b73245f83ef11e375c10bd2728bb8e89c6973c596871ef4dd&amp;source=constructor"
+          width="670" height="454" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+    <footer class="footer">
+  <div class="container">
+
+    <h2 class="footer__title section-title">Ого! вы долистали до конца</h2>
+
+    <div class="footer__wrapper">
+      <div class="footer__cols">
+        <a class="footer__logo logo" href="">
+          <img src="images/logo.svg" alt="Логотип">
+        </a>
+        <p>Центр развлечения для детей и взрослых в Ульяновске</p>
+        <a class="footer__policy" href="#">Политика конфиденциальности</a>
+        <p>Copyright 2006-2020 г.</p>
+      </div>
+
+      <div class="footer__lists">
+        <div class="">
+          <h3 class="footer__cols-title">Гостям</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Главная страница</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Все услуги</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Новости и акции</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Подарочные сертификаты</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <h3 class="footer__cols-title">Услуги</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Все развлечения</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Детские праздники</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Корпоративные мероприятия</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Выездные мероприятия</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Лазертаг</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Анимация</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__cols">
+        <h3 class="footer__cols-title">О центре</h3>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Контактная информация
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Юридическая информация</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">3D-тур</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Франшиза</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__cols">
+        <h3 class="footer__cols-title">Контакты</h3>
+
+        <address class="footer__location">
+          <a class="city" href="#">Ульяновск</a>
+          <a class="route" href="#">Как добраться</a>
+        </address>
+        <address class="footer__phone">
+          <a class="phone" href="tel:33-54-62">33 - 54 - 62</a>
+          <a class="text" href="#">Обратный звонок</a>
+        </address>
+
+        <div class="footer__messengers messengers">
+          <ul class="messengers__list">
+            <li class="messenger__item">
+              <a class="messengers__link messengers__link--whatsapp" href="#"
+                aria-label="Напишите или позвоните нам в ватсап"></a>
+            </li>
+            <li class="messengers__item">
+              <a class="messengers__link messengers__link--viber" href="#"
+                aria-label="Напишите или позвоните нам в вайбер"></a>
+            </li>
+            <li class="messengers__item">
+              <a class="messengers__link messengers__link--telegram" href="#"
+                aria-label="Напишите или позвоните нам в телеграм"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__socials socials">
+          <span class="socials__text">Соц сети: </span>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram" href="#" aria-label="Посомтреть нас в инстаграме"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="#" aria-label="Посомтреть нас в вконтакте"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+
+    <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- nouislider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- Fancybox -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+  <!-- MixitUp -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+
+  <!-- Simple Bar Js  -->
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+  <!-- JS -->
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -97,22 +97,30 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  // * ==== Dropdown
-  document.addEventListener('click', e => {
-    const isDropdownButton = e.target.closest("[data-dropdown-button]")
-    if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) return;
+  // * ==== Drop Menu
+  (function dropMenu() {
+    document.addEventListener('click', e => {
+      const overlay = document.querySelector('.overlay');
+      const body = document.querySelector('body');
+      const isDropdownButton = e.target.closest("[data-dropdown-button]")
+      if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) return;
 
-    let currentDropdown;
-    if (isDropdownButton) {
-      currentDropdown = e.target.closest('[data-dropdown]');
-      currentDropdown.classList.toggle('active');
-    };
+      let currentDropdown;
+      if (isDropdownButton) {
+        currentDropdown = e.target.closest('[data-dropdown]');
+        currentDropdown.classList.toggle('active');
+        overlay.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+      };
 
-    document.querySelectorAll('[data-dropdown].active').forEach(dropdown => {
-      if (dropdown === currentDropdown) return;
-      dropdown.classList.remove('active');
+      document.querySelectorAll('[data-dropdown].active').forEach(dropdown => {
+        if (dropdown === currentDropdown) return;
+        dropdown.classList.remove('active');
+        overlay.classList.remove('active');
+        body.classList.remove('no-scroll');
+      });
     });
-  });
+  })();
 
   // * ==== Toggle Tabs
   function tabsSlider(

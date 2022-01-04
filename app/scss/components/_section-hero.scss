@@ -122,8 +122,8 @@
     @include backgroundImage(url('../images/content/hero/hero-7.jpg'), cover);
 
     @include breakpointsMaxW($bp-576) {
-      min-height: 610px;
-      @include backgroundImage(url('../images/content/hero/hero-7-small.jpg'), cover);
+      min-height: 310px;
+      @include backgroundImage(url('../images/content/hero/hero-7.jpg'), cover);
       background-position: center left;
     }
 
